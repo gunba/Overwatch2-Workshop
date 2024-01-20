@@ -1,0 +1,3060 @@
+settings
+{
+	main
+	{
+		Description: "An authentic recreation of all known Overwatch 2 mechanics as shown in the PVP test in Hawaii, as well as any additional changes discussed by developers since."
+		Mode Name: "Mayhem Overwatch 2"
+	}
+
+	lobby
+	{
+		Map Rotation: After A Game
+		Max Spectators: 12
+		Return To Lobby: After A Game
+	}
+
+	modes
+	{
+		Control
+		{
+			Score To Win: 3
+
+			enabled maps
+			{
+				Lijiang Tower 0
+			}
+		}
+
+		Escort
+		{
+			enabled maps
+			{
+			}
+		}
+
+		Hybrid
+		{
+			enabled maps
+			{
+			}
+		}
+
+		General
+		{
+			Competitive Rules: On
+			Game Mode Start: Immediately
+			Kill Cam: Off
+			Respawn Time Scalar: 80%
+			Skins: Off
+		}
+	}
+
+	heroes
+	{
+		General
+		{
+			Ana
+			{
+				Sleep Dart Cooldown Time: 125%
+			}
+
+			Bastion
+			{
+				A-36 Tactical Grenade: Off
+				Ammunition Clip Size Scalar: 57%
+				Projectile Speed: 500%
+				Ultimate Duration: 200%
+			}
+
+			Brigitte
+			{
+				Healing Dealt: 83%
+				Shield Bash Cooldown Time: 70%
+			}
+
+			D.Va
+			{
+				Defense Matrix Maximum Time: 150%
+				Defense Matrix Recharge Rate: 125%
+			}
+
+			Doomfist
+			{
+				Damage Dealt: 75%
+				Power Block Cooldown Time: 133%
+				Rocket Punch Cooldown Time: 200%
+				Seismic Slam Cooldown Time: 133%
+			}
+
+			Mei
+			{
+				Weapon Freeze Rate Scalar: 0%
+			}
+
+			Mercy
+			{
+				Healing Dealt: 90%
+			}
+
+			Moira
+			{
+				Healing Dealt: 90%
+			}
+
+			Reinhardt
+			{
+				Charge Cooldown Time: 80%
+			}
+
+			Soldier: 76
+			{
+				Damage Dealt: 500%
+			}
+
+			Sombra
+			{
+				Hack Cooldown Time: 75%
+			}
+
+			Winston
+			{
+				Barrier Projector Cooldown Time: 88%
+			}
+
+			Zarya
+			{
+				Projected Barrier Cooldown Time: 0%
+			}
+
+			disabled heroes
+			{
+				Illari
+				Junker Queen
+				Kiriko
+				Lifeweaver
+				Ramattra
+				Sojourn
+			}
+		}
+	}
+
+	extensions
+	{
+		Debuff Status Effects
+		Energy Explosion Effects
+		Explosion Sounds
+	}
+}
+
+variables
+{
+	global:
+		1: Tank
+		2: Damage
+		3: Support
+		26: OW2ChargeUIHeroes
+		27: OW2MaxHealth
+		28: OW2BannedHeroes
+		29: OW2PlayerJoined
+		30: OW2BansIter
+		67: OW2UnhackableUlt
+		68: OW2UnhackableA1
+		69: OW2UnhackableA2
+		70: OW2RFOHeroes
+		72: OW2TankHeroes
+		73: OW2DamageHeroes
+		74: OW2SupportHeroes
+		75: OW2UltChargeReq
+		76: OW2InstantVar
+
+	player:
+		0: OW2RFOIter2
+		1: AntiHack_Ability1
+		2: AntiHack_Ability2
+		3: AntiHack_Ammo1
+		4: AntiHack_Ammo2
+		5: AntiHack_HP
+		6: AntiHack_Secondary
+		7: AntiHack_UltCharge
+		8: Brigitte_BashClosest
+		9: Brigitte_Bashing
+		10: Brigitte_NextFrameRally
+		11: Brigitte_RallyExpired
+		12: Brigitte_RallyPools
+		13: Brigitte_RallyTicksCount
+		14: Brigitte_ShieldBashDmgMod
+		15: Brigitte_Iter
+		16: DVA_BabyHealthFix
+		17: DamageMod
+		18: Doomfist_NextFrameImpulse
+		19: Doomfist_NextFrameKB
+		20: Doomfist_PunchDir
+		21: Doomfist_PunchDirYMod
+		22: HeroText1
+		23: HeroText2
+		24: Junkrat_TrappedVec
+		25: OW2AbilityCharges
+		26: OW2AbilityEffect
+		27: OW2AbilityVar
+		28: OW2AbilityVar2
+		29: OW2AvailableHeroes
+		30: OW2ChargesHUD
+		31: OW2CurHero
+		32: OW2UltError
+		33: OW2EnemyDist
+		34: OW2HealerHealOverTime
+		35: OW2HealerHealOverTimeValue
+		36: OW2PrevDamageMod
+		37: OW2PrevHero
+		38: OW2PrevSpeedMod
+		39: OW2RFOBatch
+		40: OW2RFOBatchVictim
+		41: OW2RFOBuffer
+		42: OW2SupportRing
+		43: OW2Role
+		44: OW2ServerMessage
+		45: OW2RFOIter
+		46: OW2TankHealMod
+		47: Sombra_DetectedIcon
+		48: Sombra_EMPCast
+		49: Sombra_EMPEffect
+		50: Sombra_EMPSound
+		51: Sombra_EMPVictim
+		52: Sombra_HackIcon
+		53: Bastion_RocketSound
+		54: Sombra_SelectedTarget
+		55: SpeedMod
+		56: Torb_OverloadHealthMod
+		57: Winston_BubbleVec
+		58: Winston_ShieldBreaker
+		59: Winston_ShieldBreakerMod
+		60: Bastion_Proj1
+		61: Bastion_Effects
+		62: Bastion_ProjSpeed
+		63: Bastion_ProjDir
+		64: Bastion_Iter
+		65: Bastion_Knockback
+		66: Bastion_KnockbackVictim
+		67: Bastion_AbilityVec
+		68: Bastion_AbilityUsing
+		69: Bastion_StickyTarget
+		70: Bastion_Steve
+		71: Bastion_Rockets
+		72: Bastion_RocketCircles
+		73: Sombra_ChasePrimary
+		74: Bastion_IroncladMod
+		75: OW2UltChargePer1
+		76: Bastion_RocketRaycast
+		77: OW2MaxHealthTemp
+		78: OW2MaxHealthTempSpace
+		79: OW2MaxHealthSub
+		80: OW2Hackable
+		81: Bastion_GrenadeDamageVal
+}
+
+subroutines
+{
+	8: ResetHero
+}
+
+rule("Global")
+{
+	event
+	{
+		Ongoing - Global;
+	}
+
+	actions
+	{
+		Disable Inspector Recording;
+		"Heroes that need ranged falloff correction (increase damage at range)"
+		Global.OW2RFOHeroes = Array(Hero(Sombra), Hero(D.Va));
+		"Ult points required per ult per hero (for scaling ult charge when shooting tanks)"
+		Global.OW2UltChargeReq = Array(2800, 1680, 2430, 2240, 2860, 2060, 2800, 2060, 2060, 3080, 2240, 3080, 2580, 2990, 2240, 2570,
+			2800, 3080, 3920, 2060, 2150, 1870, 2240, 2800, 2240, 3740, 3740, 2060, 2990, 3010, 3080, 2620);
+		"Set the list of valid heroes (allows us to edit role categories)"
+		Global.OW2TankHeroes = All Tank Heroes;
+		Global.OW2DamageHeroes = All Damage Heroes;
+		Global.OW2SupportHeroes = All Support Heroes;
+		Modify Global Variable(OW2TankHeroes, Append To Array, Hero(Doomfist));
+		Modify Global Variable(OW2DamageHeroes, Remove From Array By Value, Hero(Doomfist));
+		Global.OW2UnhackableUlt = Array(Hero(Doomfist), Hero(Zenyatta));
+		Global.OW2UnhackableA1 = Array(Hero(Mei), Hero(Moira), Hero(Reaper));
+		Global.OW2UnhackableA2 = Array(Hero(Tracer));
+		Global.OW2ChargeUIHeroes = Array(Hero(Bastion), Hero(Reinhardt), Hero(Zarya));
+		"Allocate global values for role IDs (so we don't have to string compare)"
+		Global.Tank = 0;
+		Global.Damage = 1;
+		Global.Support = 2;
+		"Max health (i.e. not armor or shields). This number + 100 gives us max rally stacks."
+		Global.OW2MaxHealth = Array(250, 150, 200, 200, 200, 400, 200, 450, 175, 200, 100, 50, 200, 700, 225, 200, 300, 200, 200, 400, 250,
+			200, 500, 200, 200, 150, 200, 600, 200, 200, 200, 400);
+		"We need this workaround to create a test player we can always reference for creating hero pools. "
+		Create Dummy Bot(Hero(Reaper), Team 1, 7, Vector(0, 0, 0), Vector(0, 0, 0));
+		"Check available heroes to this player (this way player hero availability cannot impact the banlist)."
+		Global.OW2BannedHeroes = Filtered Array(All Heroes, !Array Contains(Allowed Heroes(Players In Slot(7, Team 1)),
+			Current Array Element));
+		Destroy Dummy Bot(Team 1, 7);
+	}
+}
+
+rule("On Death")
+{
+	event
+	{
+		Player Died;
+		All;
+		All;
+	}
+
+	actions
+	{
+		"Clear up Sombra hack visibility"
+		If(Event Player.Sombra_HackIcon);
+			Destroy Icon(Event Player.Sombra_HackIcon);
+			Event Player.Sombra_HackIcon = Null;
+		End;
+		"Clear detected visibility"
+		If(Event Player.Sombra_DetectedIcon);
+			Destroy Icon(Event Player.Sombra_DetectedIcon);
+			Event Player.Sombra_DetectedIcon = Null;
+		End;
+		"Clear rally on death"
+		Event Player.Brigitte_RallyExpired = True;
+	}
+}
+
+rule("On Join")
+{
+	event
+	{
+		Player Joined Match;
+		All;
+		All;
+	}
+
+	actions
+	{
+		Abort If(Is Dummy Bot(Event Player));
+		"It's ugly we have to do this every join but we need an eventplayer reference and getting that from the global function seems non trivial"
+		Reset Player Hero Availability(Event Player);
+		Set Player Allowed Heroes(Players In Slot(0, All Teams), Filtered Array(Global.OW2TankHeroes, !Array Contains(
+			Global.OW2BannedHeroes, Current Array Element)));
+		Set Player Allowed Heroes(Players In Slot(1, All Teams), Filtered Array(Global.OW2DamageHeroes, !Array Contains(
+			Global.OW2BannedHeroes, Current Array Element)));
+		Set Player Allowed Heroes(Players In Slot(2, All Teams), Filtered Array(Global.OW2DamageHeroes, !Array Contains(
+			Global.OW2BannedHeroes, Current Array Element)));
+		Set Player Allowed Heroes(Players In Slot(3, All Teams), Filtered Array(Global.OW2SupportHeroes, !Array Contains(
+			Global.OW2BannedHeroes, Current Array Element)));
+		Set Player Allowed Heroes(Players In Slot(4, All Teams), Filtered Array(Global.OW2SupportHeroes, !Array Contains(
+			Global.OW2BannedHeroes, Current Array Element)));
+		Global.OW2PlayerJoined = True;
+	}
+}
+
+rule("On Switch Hero (Hero Of)")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Hero Of(Event Player) != Event Player.OW2CurHero;
+		Is Duplicating(Event Player) == False;
+		Is Between Rounds == False;
+		Array Contains(All Heroes, Hero Of(Event Player)) == True;
+	}
+
+	actions
+	{
+		"We design it this way so we can set Echo's hero when she duplicates."
+		Event Player.OW2CurHero = Hero Of(Event Player);
+	}
+}
+
+rule("On Switch Hero (OW2CurHero)")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero != Event Player.OW2PrevHero;
+	}
+
+	actions
+	{
+		"We don't need this code for dummy bots in any case."
+		Abort If(Is Dummy Bot(Event Player));
+		"Set speed mods first since we need baseline for correcting roles"
+		Event Player.DamageMod = 100;
+		Event Player.SpeedMod = 100;
+		"Check the hero roles"
+		If(Event Player.OW2Role == Global.Support);
+			Stop Heal Over Time(Event Player.OW2HealerHealOverTime);
+			Event Player.OW2HealerHealOverTime = False;
+		Else If(Event Player.OW2Role == Global.Damage);
+		Else If(Event Player.OW2Role == Global.Tank);
+			Stop Healing Modification(Event Player.OW2TankHealMod);
+		End;
+		"Check the previous hero"
+		If(Event Player.OW2PrevHero == Hero(Doomfist));
+			Stop Scaling Player(Event Player);
+		Else If(Event Player.OW2PrevHero == Hero(Bastion));
+			Stop Accelerating(Event Player);
+			Allow Button(Event Player, Button(Secondary Fire));
+		Else If(Event Player.OW2PrevHero == Hero(Reinhardt));
+			Set Max Health(Event Player, 100);
+		End;
+		"Cleanup charge UI for relevant heroes if needed"
+		If(Array Contains(Global.OW2ChargeUIHeroes, Event Player.OW2PrevHero));
+			Destroy In-World Text(Event Player.OW2ChargesHUD);
+			Destroy HUD Text(Event Player.HeroText1);
+			Destroy Progress Bar In-World Text(Event Player.HeroText2);
+			Event Player.OW2ChargesHUD = False;
+			Event Player.HeroText1 = False;
+			Event Player.HeroText2 = False;
+		End;
+		"Assign the previous hero."
+		Event Player.OW2PrevHero = Event Player.OW2CurHero;
+		Wait(0.064, Ignore Condition);
+		"We can reset input states (some heroes have disabled abilities)"
+		Stop Holding Button(Event Player, Button(Primary Fire));
+		Stop Holding Button(Event Player, Button(Secondary Fire));
+		Stop Holding Button(Event Player, Button(Jump));
+		Stop Chasing Player Variable(Event Player, OW2AbilityCharges);
+		Allow Button(Event Player, Button(Primary Fire));
+		Allow Button(Event Player, Button(Ultimate));
+		Allow Button(Event Player, Button(Ability 1));
+		Allow Button(Event Player, Button(Ability 2));
+		Set Ultimate Ability Enabled(Event Player, True);
+		Set Ability 1 Enabled(Event Player, True);
+		Set Ability 2 Enabled(Event Player, True);
+		Set Reload Enabled(Event Player, True);
+		Remove All Health Pools From Player(Event Player);
+		Event Player.Brigitte_RallyPools = Empty Array;
+		Event Player.Brigitte_NextFrameRally = False;
+		Event Player.Brigitte_RallyTicksCount = 0;
+		Event Player.OW2HealerHealOverTimeValue = 10;
+		Event Player.OW2UltError = 0;
+		Event Player.OW2UltChargePer1 = Global.OW2UltChargeReq[Index Of Array Value(All Heroes, Event Player.OW2CurHero)] / 100;
+		Event Player.OW2MaxHealthTemp = Global.OW2MaxHealth[Index Of Array Value(All Heroes, Event Player.OW2CurHero)] + 100;
+		Wait(0.064, Ignore Condition);
+		If(Event Player.OW2CurHero == Hero(Reinhardt));
+			Event Player.OW2AbilityCharges = 2;
+			Chase Player Variable At Rate(Event Player, OW2AbilityCharges, 2, 1 / 6.500, None);
+			Set Max Health(Event Player, 75);
+			Add Health Pool To Player(Event Player, Health, 25, True, False);
+			Add Health Pool To Player(Event Player, Armor, 150, True, False);
+			Create In-World Text(Filtered Array(Event Player, !(Is Dead(Event Player) || Is Using Ability 1(Event Player)
+				|| Is Firing Secondary(Event Player))), Custom String("{0}", Round To Integer(Event Player.OW2AbilityCharges, Down)),
+				Update Every Frame(Eye Position(Event Player) + Facing Direction Of(Event Player) * 100 + Normalize(Cross Product(
+				Cross Product(Up, Facing Direction Of(Event Player)), Facing Direction Of(Event Player))) * 53 + Normalize(Cross Product(Up,
+				Facing Direction Of(Event Player))) * -72), 10, Do Not Clip, Visible To Position and String, Color(Sky Blue),
+				Default Visibility);
+			Event Player.OW2ChargesHUD = Last Text ID;
+			Create HUD Text(Filtered Array(Event Player, Event Player.OW2CurHero == Hero(Reinhardt) && (Is Using Ability 1(Event Player)
+				|| Is Firing Secondary(Event Player))), Null, Custom String("Ability Charges: {0}", Event Player.OW2AbilityCharges), Null, Top,
+				51, Color(Sky Blue), Color(White), Color(White), Visible To and String, Default Visibility);
+			Event Player.HeroText1 = Last Text ID;
+			Create Progress Bar In-World Text(Filtered Array(Event Player, !(Is Dead(Event Player) || Is Using Ability 1(Event Player)
+				|| Is Firing Secondary(Event Player))), Event Player.OW2AbilityCharges == 2 ? 100 : Event Player.OW2AbilityCharges % 1 * 100,
+				Custom String("Fire Strikes: {0}", Round To Integer(Event Player.OW2AbilityCharges, Down)), Update Every Frame(Eye Position(
+				Event Player) + Facing Direction Of(Event Player) * 120 + Normalize(Cross Product(Cross Product(Up, Facing Direction Of(
+				Event Player)), Facing Direction Of(Event Player))) * 24 + Normalize(Cross Product(Up, Facing Direction Of(Event Player)))
+				* 0), 0.010, Do Not Clip, Event Player.OW2AbilityCharges >= 1 ? Custom Color(223, 191, 12, 180) : Custom Color(240, 240, 240,
+				120), Color(White), Visible To Position Values and Color, Default Visibility);
+			Event Player.HeroText2 = Last Text ID;
+		Else If(Event Player.OW2CurHero == Hero(Doomfist));
+			Start Scaling Player(Event Player, 1.120, True);
+			Add Health Pool To Player(Event Player, Health, 150, True, False);
+		Else If(Event Player.OW2CurHero == Hero(Sombra));
+			Disallow Button(Event Player, Button(Ultimate));
+			Event Player.DamageMod = 87.500;
+		Else If(Event Player.OW2CurHero == Hero(Bastion));
+			Event Player.OW2AbilityCharges = 10;
+			Create Progress Bar In-World Text(Filtered Array(Event Player, Is Alive(Event Player)),
+				Event Player.OW2AbilityCharges == 10 ? 100 : Event Player.OW2AbilityCharges * 10, Custom String("Sentry Tank: {0}",
+				Round To Integer(Event Player.OW2AbilityCharges, Down)), Update Every Frame(Eye Position(Event Player) + Facing Direction Of(
+				Event Player) * 120 + Normalize(Cross Product(Cross Product(Up, Facing Direction Of(Event Player)), Facing Direction Of(
+				Event Player))) * 28.500 + Normalize(Cross Product(Up, Facing Direction Of(Event Player))) * 0), 0.010, Do Not Clip,
+				Event Player.OW2AbilityCharges == 10 ? Custom Color(202, 51, 234, 180) : Custom Color(240, 240, 240, 120), Color(White),
+				Visible To Position Values and Color, Default Visibility);
+			Event Player.HeroText2 = Last Text ID;
+		Else If(Event Player.OW2CurHero == Hero(Soldier: 76) && !Is Dummy Bot(Event Player));
+			"Hack to get Winston shield closer to 100 (as damage dealt action does not affect dummy bots, so we buff Soldier in the lobby settings and then nerf him in the workshop to create a different damage value for player and dummy reapers)"
+			Event Player.DamageMod = 20;
+		Else If(Event Player.OW2CurHero == Hero(Zarya));
+			Event Player.OW2AbilityCharges = 2;
+			Chase Player Variable At Rate(Event Player, OW2AbilityCharges, 2, 1 / 9, None);
+			Create In-World Text(Filtered Array(Event Player, Is Alive(Event Player)), Custom String("{0}", Round To Integer(
+				Event Player.OW2AbilityCharges, Down)), Update Every Frame(Eye Position(Event Player) + Facing Direction Of(Event Player)
+				* 100 + Normalize(Cross Product(Cross Product(Up, Facing Direction Of(Event Player)), Facing Direction Of(Event Player)))
+				* 51 + Normalize(Cross Product(Up, Facing Direction Of(Event Player))) * -81), 10, Do Not Clip, Visible To Position and String,
+				Color(Sky Blue), Default Visibility);
+			Event Player.OW2ChargesHUD = Last Text ID;
+			Create Progress Bar In-World Text(Filtered Array(Event Player, Is Alive(Event Player)),
+				Event Player.OW2AbilityCharges == 2 ? 100 : Event Player.OW2AbilityCharges % 1 * 100, Custom String("Bubbles: {0}",
+				Round To Integer(Event Player.OW2AbilityCharges, Down)), Update Every Frame(Eye Position(Event Player) + Facing Direction Of(
+				Event Player) * 120 + Normalize(Cross Product(Cross Product(Up, Facing Direction Of(Event Player)), Facing Direction Of(
+				Event Player))) * 28.500 + Normalize(Cross Product(Up, Facing Direction Of(Event Player))) * 0), 0.010, Do Not Clip,
+				Event Player.OW2AbilityCharges >= 1 ? Custom Color(202, 51, 234, 180) : Custom Color(240, 240, 240, 120), Color(White),
+				Visible To Position Values and Color, Default Visibility);
+			Event Player.HeroText2 = Last Text ID;
+		Else If(Event Player.OW2CurHero == Hero(D.Va) && Hero Of(Event Player) != Hero(Echo));
+			"DVa gets her own special revaluated health pool so she doesn't get too much extra health as baby."
+			Add Health Pool To Player(Event Player, Health, Event Player.OW2CurHero == Hero(D.Va) && !Is In Alternate Form(Event Player)
+				? 100 : 25, True, True);
+		End;
+		"Apply role bonuses and set role strings."
+		If(Array Contains(Global.OW2TankHeroes, Event Player.OW2CurHero));
+			Start Healing Modification(Event Player, All Players(Team Of(Event Player)), 115, Receivers and Healers);
+			Event Player.OW2TankHealMod = Last Healing Modification ID;
+			If(Event Player.OW2CurHero != Hero(D.Va) && Hero Of(Event Player) != Hero(Echo));
+				Add Health Pool To Player(Event Player, Health, 100, True, False);
+			End;
+			Event Player.OW2Role = Global.Tank;
+		Else If(Array Contains(Global.OW2DamageHeroes, Event Player.OW2CurHero));
+			Event Player.SpeedMod = 109.090;
+			Event Player.OW2Role = Global.Damage;
+		Else If(Array Contains(Global.OW2SupportHeroes, Event Player.OW2CurHero));
+			Event Player.OW2Role = Global.Support;
+		End;
+	}
+}
+
+rule("Damage Mod")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.DamageMod != Event Player.OW2PrevDamageMod;
+	}
+
+	actions
+	{
+		Event Player.OW2PrevDamageMod = Event Player.DamageMod;
+		Set Damage Dealt(Event Player, Event Player.DamageMod);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Speed Mod")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.SpeedMod != Event Player.OW2PrevSpeedMod;
+	}
+
+	actions
+	{
+		Event Player.OW2PrevSpeedMod = Event Player.SpeedMod;
+		Set Move Speed(Event Player, Event Player.SpeedMod);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Correct Ult Charge")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		"Generalized ult error correction for damage and healing modifiers (which we often do not want to attribute to the player to avoid spamming hitmarkers)."
+		Absolute Value(Event Player.OW2UltError) >= Event Player.OW2UltChargePer1;
+		Event Player.OW2PrevHero != False;
+		Event Player.OW2CurHero != False;
+		Event Player.OW2UltError != Null;
+	}
+
+	actions
+	{
+		"Since we have a 1 second delay, don't set ult charge of pilot ever!"
+		If(Ultimate Charge Percent(Event Player) != 100 && !(Is In Alternate Form(Event Player) && Hero Of(Event Player) == Hero(D.Va)));
+			"We can correct both up and down. Positive error = we reduce ult charge by error, Negative = we increase ult charge by error."
+			If(Event Player.OW2UltError > 0);
+				Set Ultimate Charge(Event Player, Ultimate Charge Percent(Event Player)
+					- Event Player.OW2UltError / Event Player.OW2UltChargePer1);
+			Else;
+				Set Ultimate Charge(Event Player, Ultimate Charge Percent(Event Player) + Absolute Value(Event Player.OW2UltError)
+					/ Event Player.OW2UltChargePer1);
+			End;
+		End;
+		Event Player.OW2UltError = 0;
+		"Since we can update any number of ult charge, we don't need to do it so often."
+		Wait(1, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Reset Hero()")
+{
+	event
+	{
+		Subroutine;
+		ResetHero;
+	}
+
+	actions
+	{
+		"Predominantly used to reset invalid OW1 hacks (since we can't remove any other way)"
+		Event Player.AntiHack_Ability1 = Ability Cooldown(Event Player, Button(Ability 1));
+		Event Player.AntiHack_Ability2 = Ability Cooldown(Event Player, Button(Ability 2));
+		Event Player.AntiHack_Secondary = Ability Cooldown(Event Player, Button(Secondary Fire));
+		Event Player.AntiHack_UltCharge = Ultimate Charge Percent(Event Player);
+		Event Player.AntiHack_HP = Health(Event Player);
+		Event Player.AntiHack_Ammo1 = Ammo(Event Player, 0);
+		Event Player.AntiHack_Ammo2 = Ammo(Event Player, 1);
+		Event Player.OW2AvailableHeroes = Remove From Array(Allowed Heroes(Event Player), Hero Of(Event Player));
+		Start Forcing Player To Be Hero(Event Player, Random Value In Array(Event Player.OW2AvailableHeroes));
+		Start Forcing Player To Be Hero(Event Player, Event Player.OW2PrevHero);
+		Stop Forcing Player To Be Hero(Event Player);
+		"This wait allows ult charge to be set."
+		Wait(0.016, Ignore Condition);
+		Set Ultimate Charge(Event Player, Event Player.AntiHack_UltCharge);
+		Set Player Health(Event Player, Event Player.AntiHack_HP);
+		Set Ammo(Event Player, 0, Event Player.AntiHack_Ammo1);
+		Set Ammo(Event Player, 1, Event Player.AntiHack_Ammo2);
+		Set Ability Cooldown(Event Player, Button(Ability 1), Event Player.AntiHack_Ability1);
+		Set Ability Cooldown(Event Player, Button(Ability 2), Event Player.AntiHack_Ability2);
+		Set Ability Cooldown(Event Player, Button(Secondary Fire), Event Player.AntiHack_Secondary);
+	}
+}
+
+rule("RFO - Apply Damage")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2RFOBuffer == True;
+	}
+
+	actions
+	{
+		"We are clearing the buffer, prevent further clears."
+		Event Player.OW2RFOBuffer = False;
+		"Loop and clear any damage buffers created by RFO damage"
+		Event Player.OW2RFOIter = 0;
+		While(Event Player.OW2RFOIter < 5);
+			"Make sure we have some damage to apply."
+			If(Event Player.OW2RFOBatch[Event Player.OW2RFOIter] > 0);
+				Event Player.OW2RFOBatchVictim = Players In Slot(Event Player.OW2RFOIter, Opposite Team Of(Team Of(Event Player)));
+				"We don't give damage credit because it's annoying (damage marker for player will feel delayed), however we should give kill credit."
+				Damage(Event Player.OW2RFOBatchVictim, Event Player.OW2RFOBatch[Event Player.OW2RFOIter] > Health(Event Player.OW2RFOBatchVictim)
+					? Event Player : Null, Event Player.OW2RFOBatch[Event Player.OW2RFOIter]);
+				Event Player.OW2RFOBatch[Event Player.OW2RFOIter] = 0;
+			End;
+			Event Player.OW2RFOIter += 1;
+		End;
+	}
+}
+
+rule("RFO - Damage Mod")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		(Event Player.OW2CurHero == Hero(Sombra) || Event Player.OW2CurHero == Hero(D.Va)) == True;
+	}
+
+	actions
+	{
+		"This loop assigns our damage modifier value for RFO damage. Ideally we could just use damage modifications, but this also causes interactions with unrelated abilities (i.e. EMP, Rockets, ..)"
+		Event Player.OW2RFOIter2 = 0;
+		While(Event Player.OW2RFOIter2 < 5);
+			"Reducing the number of rules prevents server crashes on team swap I am sorry"
+			Event Player.OW2EnemyDist[Event Player.OW2RFOIter2] = Hero Of(Event Player) == Hero(Sombra) ? Min(0.200, Distance Between(
+				Event Player, Players In Slot(Event Player.OW2RFOIter2, Opposite Team Of(Team Of(Event Player)))) * 0.666 * 0.010) + (
+				Players In Slot(Event Player.OW2RFOIter2, Opposite Team Of(Team Of(Event Player))).Sombra_HackIcon ? 0.500 : 0) : Min(0.200,
+				Distance Between(Event Player, Players In Slot(0, Opposite Team Of(Team Of(Event Player)))) * 0.500 * 0.010);
+			Event Player.OW2RFOIter2 += 1;
+		End;
+		Wait(Random Integer(0.900, 1.100), Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("RFO - Sombra On Damage")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Sombra;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Event Ability == Button(Primary Fire);
+	}
+
+	actions
+	{
+		Event Player.OW2RFOBatch[Slot Of(Victim)] += Event Player.OW2EnemyDist[Slot Of(Victim)] * Event Damage;
+		Event Player.OW2RFOBuffer = True;
+		Event Player.OW2UltError -= Event Player.OW2EnemyDist[Slot Of(Victim)] * Event Damage;
+	}
+}
+
+rule("RFO - DVa On Damage")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		D.Va;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(D.Va);
+		Event Ability == Button(Primary Fire);
+		Is In Alternate Form(Event Player) == False;
+	}
+
+	actions
+	{
+		Event Player.OW2RFOBatch[Slot Of(Victim)] += Event Player.OW2EnemyDist[Slot Of(Victim)] * Event Damage;
+		Event Player.OW2RFOBuffer = True;
+		Event Player.OW2UltError -= Event Player.OW2EnemyDist[Slot Of(Victim)] * Event Damage;
+	}
+}
+
+rule("RFO - Echo On Damage")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		((Event Player.OW2CurHero == Hero(D.Va) && Is In Alternate Form(Event Player)) || (Event Player.OW2CurHero == Hero(Sombra)))
+			== True;
+		Event Ability == Button(Primary Fire);
+	}
+
+	actions
+	{
+		Event Player.OW2RFOBatch[Slot Of(Victim)] += Event Player.OW2EnemyDist[Slot Of(Victim)] * Event Damage;
+		Event Player.OW2RFOBuffer = True;
+		Event Player.OW2UltError -= Event Player.OW2EnemyDist[Slot Of(Victim)] * Event Damage;
+	}
+}
+
+rule("Healer - Heal over time")
+{
+	event
+	{
+		Player Took Damage;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		(Event Player.OW2Role == Global.Support) == True;
+		Event Player.OW2CurHero != Hero(Mercy);
+	}
+
+	actions
+	{
+		Stop Heal Over Time(Event Player.OW2HealerHealOverTime);
+		Wait(3, Restart When True);
+		Abort If Condition Is False;
+		Start Heal Over Time(Event Player, Event Player, 99999, Event Player.OW2HealerHealOverTimeValue);
+		Event Player.OW2HealerHealOverTime = Last Heal Over Time ID;
+	}
+}
+
+rule("Tanks - Reduced ult gain from damage taken")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		(Victim.OW2Role == Global.Tank) == True;
+		Event Ability != Button(Ultimate);
+		!(Victim.OW2CurHero == Hero(Wrecking Ball) && Is Using Ability 2(Victim)) == True;
+		Victim != Attacker;
+	}
+
+	actions
+	{
+		Event Player.OW2UltError += Event Damage * 0.250;
+	}
+}
+
+rule("Tanks - Less knockback")
+{
+	event
+	{
+		Player Received Knockback;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		(Event Player.OW2Role == Global.Tank) == True;
+		Attacker != Event Player;
+	}
+
+	actions
+	{
+		Wait(0.016, Ignore Condition);
+		If(Event Player.OW2CurHero == Hero(Reinhardt));
+			Apply Impulse(Event Player, Velocity Of(Event Player), Speed Of(Event Player) * -0.100, To World, Incorporate Contrary Motion);
+		Else;
+			Apply Impulse(Event Player, Velocity Of(Event Player), Speed Of(Event Player) * -0.400, To World, Incorporate Contrary Motion);
+		End;
+	}
+}
+
+rule("Ana - Nade - Heal Nerf (100 -> 60)")
+{
+	event
+	{
+		Player Dealt Healing;
+		All;
+		Ana;
+	}
+
+	conditions
+	{
+		Is Game In Progress == True;
+		Event Ability == Button(Ability 2);
+		Event Healing >= 60;
+	}
+
+	actions
+	{
+		"This is fine because we cannot heal someone to death so it doesn't matter if the initial heal is 100 (it can't change the outcome)."
+		If(Event Healing >= 100);
+			"Make sure tanks take commensurate reduction in healing vs. their healing role bonus"
+			Set Player Health(Healee, Health(Healee) - Event Healing * 0.400);
+			Event Player.OW2UltError += Event Healing * 0.400;
+		Else;
+			"Make sure we can heal people to full."
+			Set Player Health(Healee, Health(Healee) - (Event Healing - 60));
+			Event Player.OW2UltError += Event Healing - 60;
+		End;
+	}
+}
+
+rule("Bastion - Primary - No falloff")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Bastion;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Event Ability == Button(Primary Fire);
+		Event Damage < (Event Was Critical Hit ? 40 : 20);
+		Is In Alternate Form(Event Player) == False;
+	}
+
+	actions
+	{
+		Damage(Victim, Event Player, (Event Was Critical Hit ? 40 : 20) - Event Damage);
+	}
+}
+
+rule("Bastion - Primary - Slower firerate")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Is Firing Primary(Event Player) == True;
+		Is In Alternate Form(Event Player) == False;
+	}
+
+	actions
+	{
+		Stop Holding Button(Event Player, Button(Primary Fire));
+		Disallow Button(Event Player, Button(Primary Fire));
+		Wait(0.225, Ignore Condition);
+		Allow Button(Event Player, Button(Primary Fire));
+		Skip If(!Is Button Held(Event Player, Button(Primary Fire)), 1);
+		Start Holding Button(Event Player, Button(Primary Fire));
+		Abort If(Event Player.OW2CurHero != Hero(Bastion));
+		Wait Until(Is Firing Primary(Event Player) && !Is In Alternate Form(Event Player), 99999);
+		Loop;
+	}
+}
+
+rule("Bastion - Grenade - Shooting projectile")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Is Button Held(Event Player, Button(Secondary Fire)) == True;
+		(Has Status(Event Player, Knocked Down) || Has Status(Event Player, Asleep) || Has Status(Event Player, Frozen) || Has Status(
+			Event Player, Stunned) || Has Status(Event Player, Hacked)) == False;
+		Is Alive(Event Player) == True;
+		Is Communicating Any Emote(Event Player) == False;
+		Is In Alternate Form(Event Player) == False;
+	}
+
+	actions
+	{
+		Event Player.Bastion_AbilityUsing = True;
+		Event Player.OW2AbilityVar = 10;
+		Create In-World Text(Filtered Array(Event Player, Is Alive(Event Player)), Custom String("{0}", Round To Integer(
+			Event Player.OW2AbilityVar, Up)), Update Every Frame(Eye Position(Event Player) + Facing Direction Of(Event Player)
+			* 100 + Normalize(Cross Product(Cross Product(Up, Facing Direction Of(Event Player)), Facing Direction Of(Event Player)))
+			* 51 + Normalize(Cross Product(Up, Facing Direction Of(Event Player))) * -81), 10, Do Not Clip, Visible To Position and String,
+			Color(Orange), Default Visibility);
+		Event Player.OW2ChargesHUD = Last Text ID;
+		Chase Player Variable At Rate(Event Player, OW2AbilityVar, 0, 1, None);
+		Play Effect(All Players(All Teams), Explosion Sound, Color(White), Event Player, 125);
+		Create Effect(All Players(All Teams), Orb, Color(Orange), Event Player.Bastion_Proj1, 0.500, Position and Radius);
+		Event Player.Bastion_Effects[1] = Last Created Entity;
+		Create Effect(All Players(Team Of(Event Player)), Sphere, Color(Orange), Event Player.Bastion_Proj1, 0.600, Position and Radius);
+		Event Player.Bastion_Effects[2] = Last Created Entity;
+		Create Effect(All Players(Opposite Team Of(Team Of(Event Player))), Sphere, Color(Red), Event Player.Bastion_Proj1, 0.600,
+			Position and Radius);
+		Event Player.Bastion_Effects[3] = Last Created Entity;
+		Create Effect(All Players(Team 1), Sigma Gravitic Flux Target Effect, Color(Team 2), Event Player.Bastion_Proj1, 0.500,
+			Position and Radius);
+		Event Player.Bastion_Effects[4] = Last Created Entity;
+		Create Effect(All Players(Team 2), Sigma Gravitic Flux Target Effect, Color(Team 1), Event Player.Bastion_Proj1, 0.500,
+			Position and Radius);
+		Event Player.Bastion_Effects[5] = Last Created Entity;
+		Event Player.Bastion_ProjSpeed = 45;
+		Event Player.Bastion_Proj1 = Eye Position(Event Player) + World Vector Of(Vector(0, 0, 1), Event Player, Rotation);
+		Event Player.Bastion_ProjDir = Facing Direction Of(Event Player);
+		Chase Player Variable At Rate(Event Player, Bastion_ProjDir, Vector(0, -9999, 0), 20 / Event Player.Bastion_ProjSpeed,
+			Destination and Rate);
+		Chase Player Variable At Rate(Event Player, Bastion_Proj1, Event Player.Bastion_Proj1 + Event Player.Bastion_ProjDir * 100,
+			Event Player.Bastion_ProjSpeed * Magnitude Of(Event Player.Bastion_ProjDir), Destination and Rate);
+		Play Effect(All Players(All Teams), Explosion Sound, Color(White), Event Player, 55);
+		Wait Until(Distance Between(Event Player.Bastion_Proj1, First Of(Filtered Array(All Living Players(Opposite Team Of(Team Of(
+			Event Player))), Current Array Element != False))) <= 2 || Distance Between(Event Player.Bastion_Proj1, Ray Cast Hit Position(
+			Event Player.Bastion_Proj1, Event Player.Bastion_Proj1 + Down * 10, Null, All Players(All Teams), True)) <= 1.250, 5);
+		For Player Variable(Event Player, Bastion_Iter, 0, 5, 1);
+			Play Effect(All Players(All Teams), Doomfist Rising Uppercut Leap Sound, Color(White), Event Player.Bastion_Proj1, 25);
+			Wait(0.100, Ignore Condition);
+		End;
+		Stop Chasing Player Variable(Event Player, Bastion_ProjDir);
+		Stop Chasing Player Variable(Event Player, Bastion_Proj1);
+		Play Effect(All Players(All Teams), Pharah Barrage Explosion Sound, Color(White), Event Player.Bastion_Proj1, 80);
+		Play Effect(All Players(All Teams), Echo Sticky Bomb Explosion Effect, Team Of(Event Player), Event Player.Bastion_Proj1, 4);
+		Play Effect(All Players(All Teams), DVa Micro Missiles Explosion Effect, Team Of(Event Player), Event Player.Bastion_Proj1, 4);
+		Players Within Radius(Event Player.Bastion_Proj1, 5, Opposite Team Of(Team Of(Event Player)), Surfaces).Bastion_Knockback = 15;
+		Players Within Radius(Event Player.Bastion_Proj1, 5, Opposite Team Of(Team Of(Event Player)), Surfaces)
+			.Bastion_KnockbackVictim = Event Player;
+		Event Player.Bastion_AbilityUsing = False;
+		Destroy Effect(Event Player.Bastion_Effects[1]);
+		Destroy Effect(Event Player.Bastion_Effects[2]);
+		Destroy Effect(Event Player.Bastion_Effects[3]);
+		Destroy Effect(Event Player.Bastion_Effects[4]);
+		Destroy Effect(Event Player.Bastion_Effects[5]);
+		Set Environment Credit Player(Players Within Radius(Event Player.Bastion_Proj1, 5, Opposite Team Of(Team Of(Event Player)),
+			Surfaces), Event Player);
+		Event Player.Bastion_StickyTarget = Null;
+		Event Player.Bastion_ProjDir = Null;
+		Wait Until(Event Player.OW2AbilityVar == 0, 99999);
+		Destroy In-World Text(Event Player.OW2ChargesHUD);
+	}
+}
+
+rule("Bastion - Grenade - Bounce ball on map geo")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Event Player.OW2AbilityVar > 0;
+		Ray Cast Hit Position(Event Player.Bastion_Proj1 - Normalize(Event Player.Bastion_ProjDir),
+			Event Player.Bastion_Proj1 + 1 * Event Player.Bastion_ProjDir, All Players(Opposite Team Of(Team Of(Event Player))), Null,
+			True) != Event Player.Bastion_Proj1 + 1 * Event Player.Bastion_ProjDir;
+		!Event Player.Bastion_StickyTarget == True;
+		Event Player.Bastion_AbilityUsing == True;
+	}
+
+	actions
+	{
+		Event Player.Bastion_AbilityVec = Ray Cast Hit Normal(Event Player.Bastion_Proj1,
+			Event Player.Bastion_Proj1 + 0.800 * Event Player.Bastion_ProjDir, All Players(Opposite Team Of(Team Of(Event Player))), Null,
+			True);
+		Event Player.Bastion_ProjDir = -3 * Dot Product(Event Player.Bastion_ProjDir, Event Player.Bastion_AbilityVec)
+			* Event Player.Bastion_AbilityVec + Event Player.Bastion_ProjDir;
+		Event Player.Bastion_ProjDir = Normalize(Vector(X Component Of(Event Player.Bastion_ProjDir), -0.100 * Y Component Of(
+			Event Player.Bastion_ProjDir), Z Component Of(Event Player.Bastion_ProjDir)));
+		Event Player.Bastion_ProjSpeed *= 0.400;
+		Event Player.Bastion_AbilityUsing = True;
+		Wait(0.016, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Bastion - Grenade - Stick projectile to player")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Event Player.OW2AbilityVar > 0;
+		Event Player.Bastion_AbilityUsing == True;
+		"This value has to be arbitrarily large as otherwise it won't stick to large heroes (enabling it to bounce off of enemy barriers allows it to bounce off of players too). "
+		Distance Between(Closest Player To(Event Player.Bastion_Proj1, Opposite Team Of(Team Of(Event Player))),
+			Event Player.Bastion_Proj1) <= Min(Global.OW2MaxHealth[Index Of Array Value(All Heroes, Closest Player To(
+			Event Player.Bastion_Proj1, Opposite Team Of(Team Of(Event Player))).OW2CurHero)] / 100, 2.500);
+		"The projectile can reach the distance requirement while intersecting a shield."
+		Is In Line of Sight(Event Player.Bastion_Proj1, Closest Player To(Event Player.Bastion_Proj1, Opposite Team Of(Team Of(
+			Event Player))), Enemy Barriers Block LOS) == True;
+	}
+
+	actions
+	{
+		Stop Chasing Player Variable(Event Player, Bastion_Proj1);
+		Event Player.Bastion_StickyTarget = Closest Player To(Event Player.Bastion_Proj1, Opposite Team Of(Team Of(Event Player)));
+		Event Player.Bastion_AbilityVec = Direction Towards(Position Of(Event Player.Bastion_StickyTarget) + Up * 0.500,
+			Event Player.Bastion_Proj1);
+		Chase Player Variable At Rate(Event Player, Bastion_Proj1, Position Of(Event Player.Bastion_StickyTarget)
+			+ Up * 0.500 + Event Player.Bastion_AbilityVec * 1, 150, Destination and Rate);
+		Damage(Event Player.Bastion_StickyTarget, Event Player, Is In Alternate Form(Event Player) ? 35 : 25);
+	}
+}
+
+rule("Bastion - Grenade - Knockback radius")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.Bastion_Knockback == True;
+	}
+
+	actions
+	{
+		Skip If(Has Status(Event Player, Phased Out) || Has Status(Event Player, Invincible), 2);
+		Event Player.Bastion_Knockback = 15 - 3 * Max(Distance Between(Event Player, Event Player.Bastion_KnockbackVictim.Bastion_Proj1),
+			2);
+		Apply Impulse(Event Player, Direction Towards(Event Player.Bastion_KnockbackVictim.Bastion_Proj1, Event Player) + Vector(0, 3, 0),
+			Event Player.Bastion_Knockback * 1, To Player, Cancel Contrary Motion);
+		Event Player.Bastion_GrenadeDamageVal = Min(Max(250 - 50 * Distance Between(Event Player,
+			Event Player.Bastion_KnockbackVictim.Bastion_Proj1), 0), 100);
+		Damage(Event Player, Event Player.Bastion_KnockbackVictim, (Is In Alternate Form(Event Player.Bastion_KnockbackVictim) ? 1.400 : 1)
+			* Event Player.Bastion_GrenadeDamageVal);
+		Event Player.Bastion_KnockbackVictim = False;
+		Event Player.Bastion_Knockback = False;
+	}
+}
+
+rule("Bastion - Sentry - Enter sentry mode")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Is In Alternate Form(Event Player) == True;
+		Is Using Ultimate(Event Player) == False;
+		Event Player.OW2AbilityCharges > 0;
+	}
+
+	actions
+	{
+		Set Ammo(Event Player, 1, 1000);
+		Set Ammo(Event Player, 1, 1000);
+		Stop Chasing Player Variable(Event Player, OW2AbilityCharges);
+		Event Player.DamageMod /= 1.400;
+		Wait Until(Is On Ground(Event Player), 99999);
+		Start Accelerating(Event Player, Throttle Of(Event Player), 150, 4 * (Throttle Of(Event Player) == True), To Player,
+			Direction Rate and Max Speed);
+		Chase Player Variable At Rate(Event Player, OW2AbilityCharges, 0, 1, None);
+		Wait Until(!Is In Alternate Form(Event Player) || Event Player.OW2AbilityCharges == 0, 99999);
+		If(Is In Alternate Form(Event Player));
+			Press Button(Event Player, Button(Ability 1));
+		End;
+		Stop Accelerating(Event Player);
+		Event Player.DamageMod *= 1.400;
+		Chase Player Variable At Rate(Event Player, OW2AbilityCharges, 10, 1, None);
+	}
+}
+
+rule("Bastion - Sentry - Ironclad buff (20 -> 30%)")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		(Is In Alternate Form(Event Player) || Is Using Ultimate(Event Player)) == True;
+	}
+
+	actions
+	{
+		Start Damage Modification(Event Player, All Players(All Teams), 87.500, None);
+		Event Player.Bastion_IroncladMod = Last Damage Modification ID;
+		Wait Until(Is In Alternate Form(Event Player) || Is Using Ultimate(Event Player), False);
+		Stop Damage Modification(Event Player.Bastion_IroncladMod);
+	}
+}
+
+rule("Bastion - Ult - Consume rockets")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Is Using Ultimate(Event Player) == True;
+		Is Button Held(Event Player, Button(Primary Fire)) == True;
+		Event Player.Bastion_Rockets > 0;
+	}
+
+	actions
+	{
+		Stop Holding Button(Event Player, Button(Primary Fire));
+		Press Button(Event Player.Bastion_Steve, Button(Primary Fire));
+		"Calculate ray cast as close as possible to player firing"
+		Event Player.Bastion_RocketRaycast = Ray Cast Hit Position(Event Player, Event Player + Facing Direction Of(Event Player) * 100,
+			Null, Null, False);
+		"Prevent player from firing above or below altitude threshold (i.e. if they are on top of the skybox or too close)"
+		If(Distance Between(Event Player, Event Player.Bastion_RocketRaycast) > 32 || Distance Between(Event Player,
+			Event Player.Bastion_RocketRaycast) < 28);
+			Teleport(Event Player, Event Player.Bastion_RocketRaycast + Vector(0, 30, 0));
+			Wait(0.016, Ignore Condition);
+		End;
+		Allow Button(Event Player, Button(Primary Fire));
+		Press Button(Event Player, Button(Primary Fire));
+		Disallow Button(Event Player, Button(Primary Fire));
+		"Create our ring and smoke effects so players on the ground can see the impact spot"
+		Create Effect(All Players(All Teams), Ring, Team Of(Event Player), Event Player.Bastion_RocketRaycast, 4, None);
+		Event Player.Bastion_RocketCircles[Event Player.Bastion_Rockets] = Last Created Entity;
+		"Create our ring and smoke effects so players on the ground can see the impact spot"
+		Create Effect(All Players(All Teams), Beacon Sound, Team Of(Event Player), Event Player.Bastion_RocketRaycast, 8, None);
+		Event Player.Bastion_RocketSound[Event Player.Bastion_Rockets] = Last Created Entity;
+		Event Player.Bastion_Rockets -= 1;
+		"Prevent firing again for 1 second"
+		Wait(0.984, Ignore Condition);
+		If(Event Player.Bastion_Rockets == 0 && Is Alive(Event Player));
+			"Only way to force out of Bastion ult unfortunately"
+			Respawn(Event Player);
+			Apply Impulse(Event Player, Vector(0.001, 0.001, 0.001), 0.001, To World, Cancel Contrary Motion);
+			Set Player Health(Event Player, Health(Event Player.Bastion_Steve));
+		End;
+	}
+}
+
+rule("Bastion - Ult - Replacement")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Is Using Ultimate(Event Player) == True;
+		Is Dummy Bot(Event Player) == False;
+	}
+
+	actions
+	{
+		"Setup player controls"
+		Event Player.SpeedMod = 350;
+		Event Player.DamageMod = 170;
+		"Create Steve, our replacement bastion and make him aim at the sky."
+		Create Dummy Bot(Hero(Bastion), Team Of(Event Player), 7, Event Player, Event Player);
+		Event Player.Bastion_Steve = Last Created Entity;
+		Event Player.Bastion_Steve.Bastion_Steve = Event Player;
+		Set Damage Dealt(Event Player.Bastion_Steve, 0);
+		Set Player Health(Event Player.Bastion_Steve, Health(Event Player));
+		Wait(0.032, Ignore Condition);
+		Set Ultimate Charge(Event Player.Bastion_Steve, 100);
+		Wait(0.032, Ignore Condition);
+		Press Button(Event Player.Bastion_Steve, Button(Ultimate));
+		Start Forcing Dummy Bot Name(Event Player.Bastion_Steve, Event Player);
+		Set Facing(Event Player.Bastion_Steve, Vector(0, 1000, 0), To Player);
+		"Position our player and fix viewpoint"
+		Set Invisible(Event Player, All);
+		Disallow Button(Event Player, Button(Primary Fire));
+		Disallow Button(Event Player, Button(Ability 1));
+		Start Facing(Event Player, Vector(0, -10, 0), 10000, To Player, None);
+		Teleport(Event Player, Event Player + Vector(0, 30, 0));
+		Disable Movement Collision With Environment(Event Player, True);
+		Set Projectile Speed(Event Player, 6);
+		Set Gravity(Event Player, 0);
+		Event Player.Bastion_RocketCircles = Empty Array;
+		Apply Impulse(Event Player, Vector(0, -1, 0), Speed Of In Direction(Event Player, Vector(0, -1, 0)) * -1, To World,
+			Incorporate Contrary Motion);
+		"Wait for ult animation before enabling firing"
+		Wait(1.500, Ignore Condition);
+		Event Player.Bastion_Rockets = 3;
+		"When we are done (either out of rockets, dead, or ultimate has finished)"
+		Wait Until(!Is Using Ultimate(Event Player), 99999);
+		Wait(0.016, Ignore Condition);
+		Stop Facing(Event Player);
+		Event Player.Bastion_Rockets = 0;
+		Set Ultimate Charge(Event Player, 0);
+		Set Gravity(Event Player, 100);
+		Set Projectile Speed(Event Player, 100);
+		Allow Button(Event Player, Button(Primary Fire));
+		Allow Button(Event Player, Button(Ability 1));
+		Event Player.SpeedMod = 109.090;
+		Event Player.DamageMod = 170;
+		Enable Movement Collision With Environment(Event Player);
+		"If the player is not dead, we should replace Steve with our player as if nothing ever happened."
+		If(Is Alive(Event Player) && Is Alive(Players In Slot(7, Team Of(Event Player))));
+			"Vector is a little higher than original position so we don't fall through floor."
+			Teleport(Event Player, Event Player.Bastion_Steve + Vector(0, 1, 0));
+			Apply Impulse(Event Player, Vector(0.001, 0.001, 0.001), 0.001, To World, Cancel Contrary Motion);
+			Set Facing(Event Player, Vector(0, 1000, 0), To Player);
+			Stop Facing(Event Player);
+		End;
+		Destroy Dummy Bot(Team Of(Event Player), 7);
+		Set Invisible(Event Player, None);
+		Wait(3, Ignore Condition);
+		Destroy Effect(Event Player.Bastion_RocketSound[1]);
+		Destroy Effect(Event Player.Bastion_RocketSound[2]);
+		Destroy Effect(Event Player.Bastion_RocketSound[3]);
+		Destroy Effect(Event Player.Bastion_RocketCircles[1]);
+		Destroy Effect(Event Player.Bastion_RocketCircles[2]);
+		Destroy Effect(Event Player.Bastion_RocketCircles[3]);
+	}
+}
+
+rule("Bastion - Ult - Healing Steve heals player")
+{
+	event
+	{
+		Player Received Healing;
+		All;
+		Bastion;
+	}
+
+	conditions
+	{
+		Is Dummy Bot(Event Player) == True;
+	}
+
+	actions
+	{
+		"We apply damage done to dummy bot to the ulting bastion. We do not need an echo version of this rule (Echo's Bastion dummy is also Bastion)"
+		Heal(Event Player.Bastion_Steve, Healer, Event Healing);
+	}
+}
+
+rule("Bastion - Ult - Damaging Steve damages player")
+{
+	event
+	{
+		Player Took Damage;
+		All;
+		Bastion;
+	}
+
+	conditions
+	{
+		Is Dummy Bot(Event Player) == True;
+	}
+
+	actions
+	{
+		"We apply damage done to dummy bot to the ulting bastion. We do not need an echo version of this rule (Echo's Bastion dummy is also Bastion)"
+		Damage(Event Player.Bastion_Steve, Attacker, Event Damage * 1.330);
+	}
+}
+
+rule("Bastion - Ult - Killing Steve kills player")
+{
+	event
+	{
+		Player Died;
+		All;
+		Bastion;
+	}
+
+	conditions
+	{
+		Is Dummy Bot(Event Player) == True;
+	}
+
+	actions
+	{
+		"We don't give credit to player (they already get credit for killing the dummy)"
+		Kill(Event Player.Bastion_Steve, Null);
+	}
+}
+
+rule("Bastion - Ult - Maintain altitude")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Is Using Ultimate(Event Player) == True;
+		Event Player.Bastion_Rockets == True;
+		(Altitude Of(Event Player) < 50) == True;
+	}
+
+	actions
+	{
+		"We use this function to (attempt to) provide seamless height adjustments based on camera position, though we also prevent firing from invalid positions anyway (in case user fires inbetween updates or is on top of the skybox and is too far away)"
+		If(Altitude Of(Event Player) < 28 || Altitude Of(Event Player) > 32);
+			Teleport(Event Player, Event Player + Vector(0, 30 - Altitude Of(Event Player), 0));
+		End;
+		Wait(0.250, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Brigitte - Bash - Increase distance (6.85 -> 12m)")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Is Firing Primary(Event Player) == True;
+		Is Firing Secondary(Event Player) == True;
+	}
+
+	actions
+	{
+		"Prevent scaling unrelated motion with shield bash motion."
+		Apply Impulse(Event Player, Velocity Of(Event Player) * -1, 1, To World, Cancel Contrary Motion);
+		Set Move Speed(Event Player, 175);
+		Wait Until(!(Is Firing Primary(Event Player) && Is Firing Primary(Event Player)), 2);
+		Set Move Speed(Event Player, 100);
+	}
+}
+
+rule("Brigitte - Bash - Cancel bashing status if does damage")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Brigitte;
+	}
+
+	conditions
+	{
+		Event Player.Brigitte_ShieldBashDmgMod == True;
+	}
+
+	actions
+	{
+		Event Player.Brigitte_Bashing = False;
+	}
+}
+
+rule("Brigitte - Bash - Increase damage (5 -> 50 base)")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Is Firing Primary(Event Player) == True;
+		Is Firing Secondary(Event Player) == True;
+	}
+
+	actions
+	{
+		Event Player.Brigitte_Bashing = True;
+		Start Damage Modification(All Players(All Teams), Event Player, 1000, Receivers Damagers and Damage Percent);
+		Event Player.Brigitte_ShieldBashDmgMod = Last Damage Modification ID;
+		Wait Until(Is Firing Primary(Event Player) == False || Is Firing Secondary(Event Player) == False, 999);
+		Stop Damage Modification(Event Player.Brigitte_ShieldBashDmgMod);
+		Wait(0.016, Ignore Condition);
+		Event Player.Brigitte_ShieldBashDmgMod = Null;
+	}
+}
+
+rule("Brigitte - Bash - Damage nearby shielding Rein/Brig")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Event Player.Brigitte_Bashing == True;
+		Event Player.Brigitte_ShieldBashDmgMod == False;
+	}
+
+	actions
+	{
+		Event Player.Brigitte_BashClosest = First Of(Filtered Array(All Players(Opposite Team Of(Team Of(Event Player))), Distance Between(
+			Event Player, Current Array Element) < 3));
+		"If we bashed near a Rein or Brig with shield up."
+		If(Event Player.Brigitte_BashClosest && (Event Player.Brigitte_BashClosest.OW2CurHero == Hero(Reinhardt)
+			|| Event Player.Brigitte_BashClosest.OW2CurHero == Hero(Brigitte)) && Is Firing Secondary(Event Player.Brigitte_BashClosest));
+			Damage(Event Player.Brigitte_BashClosest, Event Player, 50);
+		End;
+		Event Player.Brigitte_Bashing = False;
+	}
+}
+
+rule("Brigitte - Bash - Lower stun duration")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Brigitte;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Event Ability == Button(Primary Fire);
+		Is Firing Secondary(Event Player) == True;
+	}
+
+	actions
+	{
+		Wait Until(Has Status(Victim, Stunned), 0.064);
+		Clear Status(Victim, Stunned);
+	}
+}
+
+rule("Brigitte - Pack - Correct healing mod")
+{
+	event
+	{
+		Player Dealt Healing;
+		All;
+		Brigitte;
+	}
+
+	conditions
+	{
+		Normalized Health(Healee) != 1;
+		Event Ability == Button(Ability 2);
+	}
+
+	actions
+	{
+		Heal(Healee, Event Player, Event Healing * 0.204);
+	}
+}
+
+rule("Brigitte - Rally - Armor -> temp HP")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Is Using Ultimate(Event Player) == True;
+	}
+
+	actions
+	{
+		Players Within Radius(Eye Position(Event Player), 8.500, Team Of(Event Player), Surfaces And Enemy Barriers)
+			.Brigitte_NextFrameRally = True;
+		Wait(0.500, Ignore Condition);
+		Event Player.Brigitte_RallyTicksCount = Event Player.Brigitte_RallyTicksCount + 1;
+		If(Event Player.Brigitte_RallyTicksCount == 20 || Is Alive(Event Player) == False);
+			Event Player.Brigitte_RallyTicksCount = 0;
+			"When rally is over, start our 30 second timer."
+			Wait Until(!Is Using Ultimate(Event Player), 99999);
+			"Maybe they get rally again in 30 seconds or an Echo copies on their team and also rallies."
+			Wait Until(Is Using Ultimate(Players On Hero(Hero(Brigitte), Team Of(Event Player))), 30);
+			"If no one else has rallied it must have timed out, remove all stacks."
+			If(!Is Using Ultimate(Players On Hero(Hero(Brigitte), Team Of(Event Player))));
+				All Players(Team Of(Event Player)).Brigitte_RallyExpired = True;
+			End;
+			Break;
+		Else;
+			Loop;
+		End;
+	}
+}
+
+rule("Brigitte - Rally - Apply ticks")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.Brigitte_NextFrameRally == True;
+	}
+
+	actions
+	{
+		Event Player.Brigitte_NextFrameRally = False;
+		"Calculate how much space we have for rally."
+		Event Player.OW2MaxHealthTempSpace = Min(15, Event Player.OW2MaxHealthTemp - Health Of Type(Event Player, Health));
+		"Clear as much of the armor as we can (up to 15)"
+		If(Health(Event Player) > 15);
+			Set Player Health(Event Player, Health(Event Player) - 15);
+		Else;
+			Set Player Health(Event Player, 1);
+		End;
+		"If we are not rally capped, add some rally."
+		If(Health Of Type(Event Player, Health) < Event Player.OW2MaxHealthTemp);
+			"We use this variable to allow for hybrid heal/armor ticks"
+			Event Player.OW2MaxHealthSub = 0;
+			If(Health(Event Player) < Max Health(Event Player));
+				Event Player.OW2MaxHealthSub = Min(Max Health(Event Player) - Health(Event Player), 15);
+				Heal(Event Player, Players On Hero(Hero(Brigitte), Team Of(Event Player)), Event Player.OW2MaxHealthSub);
+			End;
+			"If we didn't heal for a full tick."
+			If(Event Player.OW2MaxHealthTempSpace - Event Player.OW2MaxHealthSub > 0);
+				Add Health Pool To Player(Event Player, Health, Event Player.OW2MaxHealthTempSpace - Event Player.OW2MaxHealthSub, False, False);
+				Modify Player Variable(Event Player, Brigitte_RallyPools, Append To Array, Last Created Health Pool);
+			End;
+		End;
+	}
+}
+
+rule("Brigitte - Rally - Expired")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.Brigitte_RallyExpired == True;
+	}
+
+	actions
+	{
+		"We run this code regardless of rally status, so here we make sure the player actually has applied rallies that have not been collected. "
+		If(Event Player.Brigitte_RallyPools == Empty Array);
+			Event Player.Brigitte_RallyExpired = False;
+		Else;
+			"Because of course the first health pool has an identifier of zero and zero is null. "
+			If(Event Player.Brigitte_RallyPools[Event Player.Brigitte_Iter] != Null || Event Player.Brigitte_Iter == 0);
+				Remove Health Pool From Player(Event Player.Brigitte_RallyPools[Event Player.Brigitte_Iter]);
+				Event Player.Brigitte_RallyPools[Event Player.Brigitte_Iter] = Null;
+			Else;
+				Event Player.Brigitte_RallyExpired = False;
+			End;
+			Event Player.Brigitte_Iter += 1;
+			"We must expire the health pools one at a time so that they feel appreciated."
+			Wait(0.064, Ignore Condition);
+			Loop If Condition Is True;
+			Event Player.Brigitte_Iter = 0;
+			"If we don't empty the array it will continue to use the maximum index of the array (even if all previous values are null)"
+			Event Player.Brigitte_RallyPools = Empty Array;
+		End;
+	}
+}
+
+rule("Brigitte - Rally - Force expire on game start")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Is Game In Progress == True;
+	}
+
+	actions
+	{
+		Event Player.Brigitte_RallyExpired = True;
+	}
+}
+
+rule("DVa - Primary - Reduce movement penalty while shooting")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(D.Va);
+		Is In Alternate Form(Event Player) == False;
+		Is Firing Primary(Event Player) == True;
+		Event Player.Junkrat_TrappedVec == Null;
+		Is Using Ability 1(Event Player) == False;
+	}
+
+	actions
+	{
+		Wait Until(Is Using Ability 1(Event Player), False);
+		Set Move Speed(Event Player, 120);
+		Wait Until(!Is Firing Primary(Event Player) || Is Using Ability 1(Event Player), 99999);
+		Set Move Speed(Event Player, 100);
+	}
+}
+
+rule("DVa - Mech - Correct pilot ult charge to zero")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		"i.e. they are not both true or both false. We use this to condense two rules into one."
+		Is In Alternate Form(Event Player) + Event Player.DVA_BabyHealthFix == 1;
+		"This is old code that was used for managing D.Va health pools. We now use it to make sure workshop behaves itself with setting mech:pilot ult charge."
+		Event Player.OW2CurHero == Hero(D.Va);
+	}
+
+	actions
+	{
+		"Player has remeched."
+		If(Is In Alternate Form(Event Player) == False);
+			Event Player.DVA_BabyHealthFix = False;
+		"Player has demeched"
+		Else;
+			Event Player.DVA_BabyHealthFix = True;
+			Set Ultimate Charge(Event Player, 0);
+		End;
+	}
+}
+
+rule("Doomfist - Uppercut - 30% damage taken reduction on uppercut")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Doomfist);
+		Is Using Ability 1(Event Player) == True;
+	}
+
+	actions
+	{
+		Set Damage Received(Event Player, 70);
+		Wait(4, Ignore Condition);
+		Set Damage Received(Event Player, 100);
+	}
+}
+
+rule("Doomfist - Punch - Record enemies near punch victim")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Doomfist;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Doomfist);
+		Event Ability == Button(Secondary Fire);
+	}
+
+	actions
+	{
+		"Set each of the players in radius of knockback pv to victim pos. Next frame, they will be knocked back relative to victim position."
+		Players Within Radius(Victim, 7, Team Of(Victim), Surfaces And All Barriers).Doomfist_NextFrameKB = Attacker;
+		"Set each of the players in radius of knockback pv to victim pos. Next frame, they will be knocked back relative to victim position."
+		Players Within Radius(Victim, 7, Team Of(Victim), Surfaces And All Barriers).Doomfist_NextFrameImpulse = Event Damage;
+		"Obviously we already punched the target."
+		Victim.Doomfist_NextFrameKB = Null;
+		"The impact should not cause knockbacks"
+		Wait(1, Ignore Condition);
+	}
+}
+
+rule("Doomfist - Punch - Knockback nearby punchables")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.Doomfist_NextFrameKB != Null;
+	}
+
+	actions
+	{
+		"Prevent edge cases where players are punched sideways by being near a victim or otherwise should not be movable."
+		If(Is In View Angle(Players On Hero(Hero(Doomfist), Opposite Team Of(Team Of(Event Player))), Event Player, 75) && !Has Status(
+			Event Player, Phased Out) && !(Event Player.OW2CurHero == Hero(Mei) && Is Using Ability 1(Event Player)));
+			"Player was cleaved by punch, apply half punch damage."
+			Damage(Event Player, Players On Hero(Hero(Doomfist), Opposite Team Of(Team Of(Event Player))),
+				Event Player.Doomfist_NextFrameImpulse * 0.500);
+			"Save the direction of the punch (so we can calculate using this instead of moving doomfist position)"
+			Event Player.Doomfist_PunchDir = Direction Towards(Players On Hero(Hero(Doomfist), Opposite Team Of(Team Of(Event Player))),
+				Event Player) * 1;
+			"Create our direction for checking collision (i.e. no vertical axis since we cannot collide enemies with the floor or the roof). "
+			Event Player.Doomfist_PunchDir = Vector(X Component Of(Event Player.Doomfist_PunchDir), 0, Z Component Of(
+				Event Player.Doomfist_PunchDir));
+			"Correct our impulse direction to include identical vertical direction so that we do not punch other heroes into the floor."
+			Event Player.Doomfist_PunchDirYMod = Vector(X Component Of(Event Player.Doomfist_PunchDir), 0.050, Z Component Of(
+				Event Player.Doomfist_PunchDir));
+			If(Event Player.OW2Role == Global.Tank);
+				"Apply push effect on adjacent victims (with some knockback resist for tanks)"
+				Apply Impulse(Event Player, Event Player.Doomfist_PunchDirYMod, Event Player.Doomfist_NextFrameImpulse * 0.350, To World,
+					Cancel Contrary Motion);
+			Else;
+				"Apply push effect on adjacent victims "
+				Apply Impulse(Event Player, Event Player.Doomfist_PunchDirYMod, Event Player.Doomfist_NextFrameImpulse * 0.500, To World,
+					Cancel Contrary Motion);
+			End;
+			"Wait to avoid instantly comparing movement speed"
+			Wait(0.200, Ignore Condition);
+			"Wait until player hits a wall or stops sliding for any other reason."
+			Wait Until(!Is In Line of Sight(Eye Position(Event Player), Eye Position(Event Player) + Event Player.Doomfist_PunchDir * 1,
+				Barriers Do Not Block LOS) || Speed Of(Event Player) < 3, 1);
+			"If a point 1 units from the player in the direction they were sliding is now LOS, they have presumably hit a wall."
+			If(!Is In Line of Sight(Eye Position(Event Player), Eye Position(Event Player) + Event Player.Doomfist_PunchDir * 1,
+				Barriers Do Not Block LOS));
+				Set Status(Event Player, Players On Hero(Hero(Doomfist), Opposite Team Of(Team Of(Event Player))), Stunned, 0.500);
+				"Shows where wall hit detection occurs"
+				disabled Create Icon(All Players(All Teams), Event Player + Event Player.Doomfist_PunchDir * 2, Arrow: Down, Visible To and Position, Color(
+					White), True);
+				"Player hit a wall, apply half of wall damage."
+				Damage(Event Player, Players On Hero(Hero(Doomfist), Opposite Team Of(Team Of(Event Player))),
+					Event Player.Doomfist_NextFrameImpulse * 0.750);
+			End;
+			"Allows us to debug stun check"
+			disabled Set Facing(Event Player, Direction Towards(Event Player - Event Player.Doomfist_PunchDir * 1, Event Player), To World);
+			Set Environment Credit Player(Event Player, Players On Hero(Hero(Doomfist), Opposite Team Of(Team Of(Event Player))));
+		End;
+		"Reset pv for future punching"
+		Event Player.Doomfist_NextFrameKB = Null;
+	}
+}
+
+rule("Echo - Duplicate - Copies workshop changes")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Is Duplicating(Event Player) == True;
+	}
+
+	actions
+	{
+		"For some reason echo copy causes enormous server lag when copying D.Va. We need to distribute it. This is true even without this function triggering the swap code. I believe it is a workshop bug related to D.Va."
+		Wait(0.500, Ignore Condition);
+		Event Player.OW2CurHero = Hero Being Duplicated(Event Player);
+		Wait Until(!Is Duplicating(Event Player), 99999);
+		Event Player.OW2CurHero = Hero Of(Event Player);
+		"If Echo copies Winston or Sombra, left click can get stuck down."
+		Stop Holding Button(Event Player, Button(Primary Fire));
+	}
+}
+
+rule("Hanzo - Storm Arrow - 15% reduced damage to tanks")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Hanzo;
+	}
+
+	conditions
+	{
+		Event Ability == Button(Ability 2);
+		(Victim.OW2Role == Global.Tank) == True;
+	}
+
+	actions
+	{
+		Set Player Health(Victim, Health(Victim) + Event Damage * 0.150);
+		Event Player.OW2UltError += Event Damage * 0.150;
+	}
+}
+
+rule("Echo - Beam - Reduced damage (12.5%, 15% vs. tanks)")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Echo);
+		Event Ability == Button(Ability 2);
+	}
+
+	actions
+	{
+		"Undoubtedly there is something lost in translation here re: dev comments."
+		If(Victim.OW2Role == Global.Tank);
+			Set Player Health(Victim, Health(Victim) + Event Damage * 0.150);
+			Event Player.OW2UltError += Event Damage * 0.150;
+		Else;
+			Set Player Health(Victim, Health(Victim) + Event Damage * 0.125);
+			Event Player.OW2UltError += Event Damage * 0.125;
+		End;
+	}
+}
+
+rule("Junkrat - Trap - Replace root with slow")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Junkrat;
+	}
+
+	conditions
+	{
+		Event Ability == Button(Ability 2);
+		(Event Player.OW2CurHero == Hero(Zenyatta) && Is Using Ultimate(Event Player)) == False;
+	}
+
+	actions
+	{
+		"The only way to break trap is to physically move the player out of it and then back again."
+		Victim.Junkrat_TrappedVec = Position Of(Victim);
+		Teleport(Victim, Victim + Vector(0, 5, 0));
+		Wait(0.016, Ignore Condition);
+		Teleport(Victim, Victim.Junkrat_TrappedVec);
+		Victim.SpeedMod = Victim.SpeedMod * 0.500;
+		Wait(3, Ignore Condition);
+		Victim.SpeedMod = Victim.SpeedMod * 2;
+		Victim.Junkrat_TrappedVec = Null;
+	}
+}
+
+rule("Junkrat - Tire - Remove role passive while using tire")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Junkrat);
+		Is Using Ultimate(Event Player) == True;
+	}
+
+	actions
+	{
+		Event Player.SpeedMod /= 6 / 5.500;
+		Wait Until(!Is Using Ultimate(Event Player), 99999);
+		Event Player.SpeedMod *= 6 / 5.500;
+	}
+}
+
+rule("Mei - Primary - Damage Increase (55 -> 90 per second)")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Mei;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Mei);
+		Event Ability == Button(Primary Fire);
+	}
+
+	actions
+	{
+		Damage(Victim, Event Player, Event Damage * (35 / 55));
+	}
+}
+
+rule("Reinhardt - Firestrike - Multiple charges")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Reinhardt);
+		Is Using Ability 2(Event Player) == True;
+	}
+
+	actions
+	{
+		Wait(0.464, Ignore Condition);
+		Event Player.DamageMod *= 0.900;
+		Wait(0.016, Ignore Condition);
+		Event Player.DamageMod /= 0.900;
+		Wait Until(!Is Using Ability 2(Event Player), 99999);
+		Event Player.OW2AbilityCharges -= 1;
+		Set Ability Cooldown(Event Player, Button(Ability 2), 6.500 - Event Player.OW2AbilityCharges * 6.500);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Reinhardt - Charge - Cancel charge on repress")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Reinhardt);
+		Is Using Ability 1(Event Player) == True;
+	}
+
+	actions
+	{
+		Wait Until(!Is Button Held(Event Player, Button(Ability 1)) || !Is Using Ability 1(Event Player), 99999);
+		Wait(0.750, Ignore Condition);
+		Wait Until(Is Button Held(Event Player, Button(Ability 1)) || !Is Using Ability 1(Event Player), 99999);
+		If(Is Using Ability 1(Event Player));
+			Wait(0.100, Ignore Condition);
+			Cancel Primary Action(Event Player);
+		End;
+	}
+}
+
+rule("Reinhardt - Charge - Improve handling")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Reinhardt);
+		Is Using Ability 1(Event Player) == True;
+	}
+
+	actions
+	{
+		While(Is Using Ability 1(Event Player));
+			Event Player.OW2AbilityVar = Horizontal Facing Angle Of(Event Player);
+			Wait(0.016, Ignore Condition);
+			If(Horizontal Facing Angle Of(Event Player) != Event Player.OW2AbilityVar);
+				Apply Impulse(Event Player, World Vector Of(Vector(Absolute Value(Event Player.OW2AbilityVar - Horizontal Facing Angle Of(
+					Event Player)) > 180 ? (Absolute Value(Horizontal Facing Angle Of(Event Player)) != Horizontal Facing Angle Of(Event Player)
+					? 1 : -1) : (Horizontal Facing Angle Of(Event Player) > Event Player.OW2AbilityVar ? 1 : (Horizontal Facing Angle Of(
+					Event Player) == Event Player.OW2AbilityVar ? 0 : -1)), 0, 0), Event Player, Rotation), (Is On Ground(Event Player) ? 4 : 1)
+					* 2 * (Absolute Value(Event Player.OW2AbilityVar - Horizontal Facing Angle Of(Event Player)) > 180 ? Absolute Value(
+					Absolute Value(Event Player.OW2AbilityVar - Horizontal Facing Angle Of(Event Player)) - 360) : Absolute Value(
+					Event Player.OW2AbilityVar - Horizontal Facing Angle Of(Event Player))), To World, Incorporate Contrary Motion);
+			End;
+		End;
+	}
+}
+
+rule("Sombra - Hack - Reset heroes with unintentional full duration hacks")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Has Status(Event Player, Hacked) == True;
+		"We can hack and reset baby D.Va pretty easily for some reason?"
+		!(Event Player.OW2CurHero == Hero(D.Va) && Is In Alternate Form(Event Player)) == True;
+		"EMP victims should not be unhacked (EMP does not rely on overlapping mechanics)"
+		!Event Player.Sombra_EMPVictim == True;
+	}
+
+	actions
+	{
+		"Someone can only be legimately hacked for 2 seconds. TODO: What about hack into EMP?"
+		Wait(1.016, Ignore Condition);
+		If(Has Status(Event Player, Hacked) && !(Event Player.Sombra_EMPVictim == True));
+			Create HUD Text(All Players(All Teams), Null, Custom String("Cleansed full duration hack on {0} by {1}.", Event Player,
+				Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player)))), Null, Left, 0, Color(White), Color(Purple), Color(
+				White), Visible To and String, Default Visibility);
+			Event Player.OW2ServerMessage = Last Text ID;
+			Call Subroutine(ResetHero);
+			Wait(10, Ignore Condition);
+			Destroy HUD Text(Event Player.OW2ServerMessage);
+		End;
+	}
+}
+
+rule("Sombra - Hack - Put icon on hacked targets")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Has Status(Event Player, Hacked) == True;
+	}
+
+	actions
+	{
+		Destroy Icon(Event Player.Sombra_HackIcon);
+		Create Icon(All Players(Opposite Team Of(Team Of(Event Player))), Event Player + Vector(0, 0.200, 0), Eye, Visible To and Position,
+			Color(Purple), True);
+		Event Player.Sombra_HackIcon = Last Created Entity;
+		Wait(8, Restart When True);
+		Destroy Icon(Event Player.Sombra_HackIcon);
+		Event Player.Sombra_HackIcon = Null;
+	}
+}
+
+rule("Sombra - Hack - Identify target")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Is Firing Secondary(Event Player) == True;
+		Ability Cooldown(Event Player, Button(Secondary Fire)) == 0;
+	}
+
+	actions
+	{
+		Event Player.Sombra_SelectedTarget = First Of(Sorted Array(Filtered Array(Remove From Array(Remove From Array(
+			Players Within Radius(Eye Position(Event Player), 16, Opposite Team Of(Team Of(Event Player)), Off), Event Player),
+			All Dead Players(All Teams)), Is In View Angle(Event Player, Current Array Element, 60 - Distance Between(Event Player,
+			Current Array Element) * 14 / 5) && Is In Line of Sight(Eye Position(Event Player), Eye Position(Current Array Element),
+			Barriers Do Not Block LOS) && !(Current Array Element.OW2CurHero == Hero(Sombra) && Is Using Ability 1(Current Array Element)
+			&& !Event Player.Sombra_DetectedIcon)), Angle Between Vectors(Facing Direction Of(Event Player), Direction Towards(
+			Eye Position(Event Player), Eye Position(Current Array Element))) + Distance Between(Eye Position(Event Player), Eye Position(
+			Current Array Element))));
+		Wait(0.032, Ignore Condition);
+		Loop If Condition Is True;
+		Wait(0.032, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Sombra - Hack - Replacement")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Is Firing Secondary(Event Player) == True;
+		Ability Cooldown(Event Player, Button(Secondary Fire)) == 0;
+		Event Player.Sombra_SelectedTarget != Null;
+	}
+
+	actions
+	{
+		"If user lets go of right click, stop hacking process."
+		Wait Until(!Is Firing Secondary(Event Player) || !Entity Exists(Event Player.Sombra_SelectedTarget) || !Is In Line of Sight(
+			Event Player, Eye Position(Event Player.Sombra_SelectedTarget), Enemy Barriers Block LOS) || !(
+			Event Player.Sombra_SelectedTarget.OW2Hackable || (Hero Of(Event Player.Sombra_SelectedTarget) == Hero(Sombra)
+			&& Is Using Ability 1(Event Player.Sombra_SelectedTarget) && Event Player.Sombra_SelectedTarget.Sombra_DetectedIcon)), 0.600);
+		If(!Is Firing Secondary(Event Player) || !Entity Exists(Event Player.Sombra_SelectedTarget) || !Is In Line of Sight(Event Player,
+			Eye Position(Event Player.Sombra_SelectedTarget), Enemy Barriers Block LOS) || !(
+			Event Player.Sombra_SelectedTarget.OW2Hackable || (Hero Of(Event Player.Sombra_SelectedTarget) == Hero(Sombra)
+			&& Is Using Ability 1(Event Player.Sombra_SelectedTarget) && Event Player.Sombra_SelectedTarget.Sombra_DetectedIcon)));
+			Set Secondary Fire Enabled(Event Player, False);
+			Disallow Button(Event Player, Button(Secondary Fire));
+			Wait(0.400, Ignore Condition);
+			Set Secondary Fire Enabled(Event Player, True);
+			Allow Button(Event Player, Button(Secondary Fire));
+			If(Is Button Held(Event Player, Button(Secondary Fire)));
+				Stop Holding Button(Event Player, Button(Secondary Fire));
+				Start Holding Button(Event Player, Button(Secondary Fire));
+			End;
+			Abort;
+		End;
+		Set Ability Cooldown(Event Player, Button(Secondary Fire), 4);
+		Set Secondary Fire Enabled(Event Player, False);
+		Disallow Button(Event Player, Button(Secondary Fire));
+		Set Status(Event Player.Sombra_SelectedTarget, Event Player, Hacked, 1);
+		Event Player.Sombra_SelectedTarget = Null;
+		Wait(0.016, Ignore Condition);
+		Set Secondary Fire Enabled(Event Player, True);
+		Allow Button(Event Player, Button(Secondary Fire));
+	}
+}
+
+rule("Sombra - Hack - Track hackable status (based on hero+current primary action)")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		!((Array Contains(Global.OW2UnhackableUlt, Event Player.OW2CurHero) && Is Using Ultimate(Event Player)) || (Array Contains(
+			Global.OW2UnhackableA1, Event Player.OW2CurHero) && Is Using Ability 1(Event Player)) || (Array Contains(
+			Global.OW2UnhackableA2, Event Player.OW2CurHero) && Is Using Ability 2(Event Player))) != Event Player.OW2Hackable;
+	}
+
+	actions
+	{
+		Event Player.OW2Hackable = !((Array Contains(Global.OW2UnhackableUlt, Event Player.OW2CurHero) && Is Using Ultimate(Event Player))
+			|| (Array Contains(Global.OW2UnhackableA1, Event Player.OW2CurHero) && Is Using Ability 1(Event Player)) || (Array Contains(
+			Global.OW2UnhackableA2, Event Player.OW2CurHero) && Is Using Ability 2(Event Player)));
+	}
+}
+
+rule("Sombra - EMP - Reduces victim health by 30%")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.Sombra_EMPVictim == True;
+	}
+
+	actions
+	{
+		If(Event Player.OW2Hackable);
+			"Trigger nameplate display (since we are not planning to actually do damage). This damage also breaks stealth and sleeps which is important."
+			Damage(Event Player, Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player))), 0.001);
+			"Use set health instead of damage so we at least do some damage to bubbled players.. (ideally it would damage bubble instead?)"
+			Set Player Health(Event Player, Health(Event Player) - Health(Event Player) * 0.300);
+			Set Status(Event Player, Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player))), Hacked, 1);
+		End;
+		Wait(2, Ignore Condition);
+		Event Player.Sombra_EMPVictim = False;
+	}
+}
+
+rule("Sombra - EMP - Full EMP replacement")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Ultimate Charge Percent(Event Player) == 100;
+		Is Button Held(Event Player, Button(Ultimate)) == True;
+		Has Status(Event Player, Hacked) == False;
+		Has Status(Event Player, Stunned) == False;
+		Has Status(Event Player, Frozen) == False;
+		Has Status(Event Player, Asleep) == False;
+		Is Alive(Event Player) == True;
+	}
+
+	actions
+	{
+		Set Ultimate Charge(Event Player, 0);
+		Play Effect(All Players(All Teams), Sombra Translocator Reappear Effect, Team Of(Event Player), Event Player, 50);
+		Event Player.Sombra_EMPCast = Last Created Entity;
+		"Is there no way to block primary actions? "
+		Disallow Button(Event Player, Button(Primary Fire));
+		Disallow Button(Event Player, Button(Secondary Fire));
+		Disallow Button(Event Player, Button(Reload));
+		Disallow Button(Event Player, Button(Ability 1));
+		Disallow Button(Event Player, Button(Ability 2));
+		Wait(0.400, Ignore Condition);
+		If(Has Status(Event Player, Hacked) || Has Status(Event Player, Asleep) || Has Status(Event Player, Knocked Down) || !Is Alive(
+			Event Player));
+			Allow Button(Event Player, Button(Primary Fire));
+			Allow Button(Event Player, Button(Secondary Fire));
+			Allow Button(Event Player, Button(Reload));
+			Allow Button(Event Player, Button(Ability 1));
+			Allow Button(Event Player, Button(Ability 2));
+			If(Is Button Held(Event Player, Button(Primary Fire)));
+				Start Holding Button(Event Player, Button(Primary Fire));
+			End;
+			Abort;
+		End;
+		Play Effect(All Players(All Teams), Sombra EMP Explosion Effect, Team Of(Event Player), Eye Position(Event Player), 15);
+		Event Player.Sombra_EMPEffect = Last Created Entity;
+		Play Effect(All Players(All Teams), Sombra EMP Explosion Sound, Color(White), Eye Position(Event Player), 100);
+		Event Player.Sombra_EMPSound = Last Created Entity;
+		Players Within Radius(Eye Position(Event Player), 15, Opposite Team Of(Team Of(Event Player)), Surfaces).Sombra_EMPVictim = True;
+		Allow Button(Event Player, Button(Primary Fire));
+		Allow Button(Event Player, Button(Secondary Fire));
+		Allow Button(Event Player, Button(Reload));
+		Allow Button(Event Player, Button(Ability 1));
+		Allow Button(Event Player, Button(Ability 2));
+		If(Is Button Held(Event Player, Button(Primary Fire)));
+			Start Holding Button(Event Player, Button(Primary Fire));
+		End;
+		Communicate(Event Player, Hello);
+		Wait(1, Ignore Condition);
+		Destroy Effect(Event Player.Sombra_EMPEffect);
+		Destroy Effect(Event Player.Sombra_EMPSound);
+		Destroy Effect(Event Player.Sombra_EMPCast);
+		"Otherwise Sombra can use EMP to farm EMP in some kind of perpetual motion machine"
+		Set Ultimate Charge(Event Player, 0);
+	}
+}
+
+rule("Sombra - Stealth - Exit faster on damage")
+{
+	event
+	{
+		Player Took Damage;
+		All;
+		Sombra;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Is Using Ability 1(Event Player) == True;
+	}
+
+	actions
+	{
+		Wait(0.400, Abort When False);
+		Cancel Primary Action(Event Player);
+	}
+}
+
+rule("Sombra - Stealth - Exit faster on cancel stealth")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Is Using Ability 1(Event Player) == True;
+	}
+
+	actions
+	{
+		Wait(1, Ignore Condition);
+		Wait Until(!Is Using Ability 1(Event Player) || Is Button Held(Event Player, Button(Primary Fire)) || Is Button Held(Event Player,
+			Button(Ability 1)) || Is Button Held(Event Player, Button(Melee)) || Is Button Held(Event Player, Button(Secondary Fire))
+			|| Is Button Held(Event Player, Button(Ultimate)), 99999);
+		Cancel Primary Action(Event Player);
+	}
+}
+
+rule("Sombra - Stealth - Re-enable stealth if using hack after stealth")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Is Firing Secondary(Event Player) == True;
+		Ability Cooldown(Event Player, Button(Ability 1)) > 4;
+	}
+
+	actions
+	{
+		Set Ability Cooldown(Event Player, Button(Ability 1), 0);
+		"Everything below this point is just so that any time after the stealth reset, if Sombra fires primary weapon, we allocate the remaining cooldown to prevent repeated stealth attacks."
+		Event Player.Sombra_ChasePrimary = 0;
+		Chase Player Variable Over Time(Event Player, Sombra_ChasePrimary, 6, 6, None);
+		Wait Until(Is Firing Primary(Event Player), 6);
+		If(Is Firing Primary(Event Player) && Event Player.Sombra_ChasePrimary);
+			Set Ability Cooldown(Event Player, Button(Ability 1), Event Player.Sombra_ChasePrimary);
+		End;
+	}
+}
+
+rule("Sombra - Stealth - Put icon on sombra if within 4 yards of enemy player")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Is Using Ability 1(Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player)))) == True;
+		Distance Between(Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player))), Event Player) <= 4;
+	}
+
+	actions
+	{
+		Create Icon(Event Player, Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player))) + Vector(0, 0.500, 0),
+			Question Mark, Visible To and Position, Color(Red), True);
+		Event Player.Sombra_DetectedIcon = Last Created Entity;
+		Wait Until(!Is Using Ability 1(Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player)))) || Distance Between(
+			Players On Hero(Hero(Sombra), Opposite Team Of(Team Of(Event Player))), Event Player) > 4, 99999);
+		Destroy Icon(Event Player.Sombra_DetectedIcon);
+		Event Player.Sombra_DetectedIcon = Null;
+	}
+}
+
+rule("Torb - Overload - Armor -> temp HP")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Torbjörn);
+		Is Using Ability 2(Event Player) == True;
+	}
+
+	actions
+	{
+		Add Health Pool To Player(Event Player, Health, 100, False, True);
+		Event Player.Torb_OverloadHealthMod = Last Created Health Pool;
+		Set Player Health(Event Player, Health(Event Player) - 100);
+		Wait(5, Ignore Condition);
+		Remove Health Pool From Player(Event Player.Torb_OverloadHealthMod);
+	}
+}
+
+rule("Winston - Bubble - Reduce health (700 -> 600)")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Winston);
+		Is Using Ability 2(Event Player) == True;
+	}
+
+	actions
+	{
+		Event Player.Winston_BubbleVec = Position Of(Event Player);
+		Wait(0.128, Ignore Condition);
+		"We have to be careful not to position our bot in the ceiling or floor. With this vector, he is sitting inside the top of the shield with his eye position above and feet position below."
+		Create Dummy Bot(Hero(Soldier: 76), Opposite Team Of(Team Of(Event Player)), 6, Event Player.Winston_BubbleVec + Vector(0, 5, 0),
+			Event Player);
+		Event Player.Winston_ShieldBreaker = Players In Slot(6, Opposite Team Of(Team Of(Event Player)));
+		Disable Movement Collision With Players(Event Player.Winston_ShieldBreaker);
+		Disable Movement Collision With Environment(Event Player.Winston_ShieldBreaker, True);
+		Set Gravity(Event Player.Winston_ShieldBreaker, 0);
+		Set Invisible(Event Player.Winston_ShieldBreaker, All);
+		Start Damage Modification(All Players(All Teams), Event Player.Winston_ShieldBreaker, 0, Receivers Damagers and Damage Percent);
+		Event Player.Winston_ShieldBreakerMod = Last Damage Modification ID;
+		Wait(0.016, Ignore Condition);
+		Set Facing(Event Player.Winston_ShieldBreaker, Down, To World);
+		Wait(0.016, Ignore Condition);
+		Press Button(Event Player.Winston_ShieldBreaker, Button(Primary Fire));
+		Wait(0.032, Ignore Condition);
+		Stop Damage Modification(Event Player.Winston_ShieldBreakerMod);
+		Destroy Dummy Bot(Opposite Team Of(Team Of(Event Player)), 6);
+	}
+}
+
+rule("Winston - Railgun - Right click to fire railgun")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Winston);
+		Is Button Held(Event Player, Button(Secondary Fire)) == True;
+		Ammo(Event Player, 0) > 0;
+		Is Reloading(Event Player) == False;
+		Is Meleeing(Event Player) == False;
+		!Is Using Ultimate(Event Player) == True;
+		Is Alive(Event Player) == True;
+	}
+
+	actions
+	{
+		Disallow Button(Event Player, Button(Primary Fire));
+		Set Reload Enabled(Event Player, False);
+		Event Player.OW2AbilityVar = 1.200;
+		Event Player.OW2AbilityEffect = Empty Array;
+		Chase Player Variable At Rate(Event Player, OW2AbilityVar, 0, 1, None);
+		Create Effect(All Players(All Teams), Good Aura, Team Of(Event Player), Update Every Frame(Eye Position(Event Player)
+			+ Facing Direction Of(Event Player) * 0.675 + Normalize(Cross Product(Cross Product(Up, Facing Direction Of(Event Player)),
+			Facing Direction Of(Event Player))) * 0.262 + Normalize(Cross Product(Up, Facing Direction Of(Event Player))) * -0.135), (
+			1.200 - Event Player.OW2AbilityVar) * 0.100, Visible To Position Radius and Color);
+		Modify Player Variable(Event Player, OW2AbilityEffect, Append To Array, Last Created Entity);
+		Create Effect(All Players(All Teams), Energy Sound, Color(Sky Blue), Update Every Frame(Eye Position(Event Player)
+			+ Facing Direction Of(Event Player)), 40, Visible To Position Radius and Color);
+		Modify Player Variable(Event Player, OW2AbilityEffect, Append To Array, Last Created Entity);
+		While(Is Button Held(Event Player, Button(Secondary Fire)) && Event Player.OW2AbilityVar != 0);
+			Set Ammo(Event Player, 0, Ammo(Event Player, 0) - 1);
+			Wait(0.048, Ignore Condition);
+			If(Is Meleeing(Event Player) || Is Dead(Event Player) || Is Reloading(Event Player) || Has Status(Event Player, Stunned)
+				|| Has Status(Event Player, Knocked Down) || Has Status(Event Player, Asleep) || Has Status(Event Player, Frozen)
+				|| Event Player.OW2AbilityVar == 0 || Is Using Ultimate(Event Player));
+				Break;
+			End;
+		End;
+		Wait Until(!Is Button Held(Event Player, Button(Secondary Fire)) || Is Meleeing(Event Player) || Is Dead(Event Player)
+			|| Is Reloading(Event Player) || Has Status(Event Player, Stunned) || Has Status(Event Player, Knocked Down) || Has Status(
+			Event Player, Asleep) || Has Status(Event Player, Frozen) || Is Using Ultimate(Event Player), 99999);
+		Stop Chasing Player Variable(Event Player, OW2AbilityVar);
+		Destroy Effect(Event Player.OW2AbilityEffect[0]);
+		Destroy Effect(Event Player.OW2AbilityEffect[1]);
+		Play Effect(All Players(Team Of(Event Player)), Ring Explosion Sound, Color(White), Eye Position(Event Player)
+			+ Facing Direction Of(Event Player), 15 + 50 * (1.200 - Event Player.OW2AbilityVar));
+		Play Effect(All Players(Opposite Team Of(Team Of(Event Player))), Ring Explosion Sound, Color(White), Eye Position(Event Player)
+			+ Facing Direction Of(Event Player), 20 + 35 * (1.200 - Event Player.OW2AbilityVar));
+		Event Player.OW2AbilityEffect = Empty Array;
+		Create Beam Effect(All Players(All Teams), Bad Beam, Update Every Frame(Eye Position(Event Player) + Facing Direction Of(
+			Event Player) * 0.675 + Normalize(Cross Product(Cross Product(Up, Facing Direction Of(Event Player)), Facing Direction Of(
+			Event Player))) * 0.247 + Normalize(Cross Product(Up, Facing Direction Of(Event Player))) * -0.142), Update Every Frame(
+			Eye Position(Event Player) + Facing Direction Of(Event Player) * Distance Between(Eye Position(Event Player),
+			Ray Cast Hit Position(Eye Position(Event Player), Eye Position(Event Player) + Facing Direction Of(Event Player) * 25, Null,
+			Null, False))), Team Of(Event Player), Visible To);
+		Modify Player Variable(Event Player, OW2AbilityEffect, Append To Array, Last Created Entity);
+		Event Player.OW2AbilityVar2 = Empty Array;
+		Global.OW2InstantVar = True;
+		While(Global.OW2InstantVar);
+			Global.OW2InstantVar = Empty Array;
+			Modify Global Variable(OW2InstantVar, Append To Array, Ray Cast Hit Player(Eye Position(Event Player) + Normalize(Cross Product(
+				Facing Direction Of(Event Player), Up)) * 0.450, Eye Position(Event Player) + Facing Direction Of(Event Player)
+				* 25 + Normalize(Cross Product(Facing Direction Of(Event Player), Up)) * 0.450, All Players(Opposite Team Of(Team Of(
+				Event Player))), Event Player.OW2AbilityVar2, True));
+			Modify Global Variable(OW2InstantVar, Append To Array, Ray Cast Hit Player(Eye Position(Event Player) + Normalize(Cross Product(
+				Facing Direction Of(Event Player), Up)) * -0.450, Eye Position(Event Player) + Facing Direction Of(Event Player)
+				* 25 + Normalize(Cross Product(Facing Direction Of(Event Player), Up)) * -0.450, All Players(Opposite Team Of(Team Of(
+				Event Player))), Event Player.OW2AbilityVar2, True));
+			Modify Global Variable(OW2InstantVar, Append To Array, Ray Cast Hit Player(Eye Position(Event Player) + Normalize(Cross Product(
+				Cross Product(Facing Direction Of(Event Player), Up), Facing Direction Of(Event Player))) * 0.450, Eye Position(Event Player)
+				+ Facing Direction Of(Event Player) * 25 + Normalize(Cross Product(Cross Product(Facing Direction Of(Event Player), Up),
+				Facing Direction Of(Event Player))) * 0.450, All Players(Opposite Team Of(Team Of(Event Player))), Event Player.OW2AbilityVar2,
+				True));
+			Modify Global Variable(OW2InstantVar, Append To Array, Ray Cast Hit Player(Eye Position(Event Player) + Normalize(Cross Product(
+				Cross Product(Facing Direction Of(Event Player), Up), Facing Direction Of(Event Player))) * -0.450, Eye Position(Event Player)
+				+ Facing Direction Of(Event Player) * 25 + Normalize(Cross Product(Cross Product(Facing Direction Of(Event Player), Up),
+				Facing Direction Of(Event Player))) * -0.450, All Players(Opposite Team Of(Team Of(Event Player))),
+				Event Player.OW2AbilityVar2, True));
+			Modify Player Variable(Event Player, OW2AbilityVar2, Append To Array, Global.OW2InstantVar);
+			Global.OW2InstantVar = Filtered Array(Global.OW2InstantVar, Current Array Element);
+		End;
+		Damage(Event Player.OW2AbilityVar2, Event Player, 50 - Event Player.OW2AbilityVar / 1.200 * 45);
+		Wait(0.150, Ignore Condition);
+		Destroy Effect(Event Player.OW2AbilityEffect[0]);
+		Allow Button(Event Player, Button(Primary Fire));
+		Set Reload Enabled(Event Player, True);
+		Event Player.OW2AbilityEffect = False;
+		Wait(0.150, Ignore Condition);
+		If(Is Button Held(Event Player, Button(Primary Fire)));
+			Start Holding Button(Event Player, Button(Primary Fire));
+		End;
+		Loop If Condition Is True;
+	}
+}
+
+rule("Zarya - Bubble (1) - Set bubble cooldown")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Zarya);
+		Event Player.OW2AbilityCharges < 1;
+		Ability Cooldown(Event Player, Button(Ability 1)) == 0;
+	}
+
+	actions
+	{
+		Wait Until(!Is Using Ability 1(Event Player), 99999);
+		Set Ability Cooldown(Event Player, Button(Ability 1), 10 - Event Player.OW2AbilityCharges * 10);
+		Wait(0.064, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Zarya - Bubble (2) - Set bubble cooldown")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Zarya);
+		Event Player.OW2AbilityCharges < 1;
+		Ability Cooldown(Event Player, Button(Ability 2)) == 0;
+	}
+
+	actions
+	{
+		Wait Until(!Is Using Ability 2(Event Player), 99999);
+		Set Ability Cooldown(Event Player, Button(Ability 2), 10 - Event Player.OW2AbilityCharges * 10);
+		Wait(0.064, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Zarya - Bubble - Reset bubble cooldown")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Zarya);
+		(Ability Cooldown(Event Player, Button(Ability 1)) > 0 || Ability Cooldown(Event Player, Button(Ability 2)) > 0) == True;
+		Event Player.OW2AbilityCharges >= 1;
+	}
+
+	actions
+	{
+		Set Ability Cooldown(Event Player, Button(Ability 1), 0);
+		Set Ability Cooldown(Event Player, Button(Ability 2), 0);
+		Wait(0.064, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
+
+rule("Zarya - Bubble (1) - Expends charge")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Zarya);
+		Is Using Ability 1(Event Player) == True;
+	}
+
+	actions
+	{
+		Event Player.OW2AbilityCharges -= 1;
+	}
+}
+
+rule("Zarya - Bubble (2) - Expends charge")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Zarya);
+		Is Using Ability 2(Event Player) == True;
+	}
+
+	actions
+	{
+		Event Player.OW2AbilityCharges -= 1;
+		Set Ability 2 Enabled(Event Player, False);
+		"We need this delay or the user can try to bubble twice in 2 seconds and cause the E to be disabled by some game issue. This issue presumably won't exist in OW2."
+		Wait(2, Ignore Condition);
+		Set Ability 2 Enabled(Event Player, True);
+	}
+}
+
+rule("Zenyatta - Ult - Yellow trans ring")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Zenyatta);
+		Is Using Ultimate(Event Player) == True;
+	}
+
+	actions
+	{
+		Create Effect(All Players(Team Of(Event Player)), Ring, Color(Yellow), Event Player, 10, Visible To Position and Radius);
+		Event Player.OW2SupportRing = Last Created Entity;
+		Wait Until(!Is Using Ultimate(Event Player), 6);
+		Destroy Effect(Event Player.OW2SupportRing);
+	}
+}
+
+rule("[Echo On Damage] Bastion - Primary - No falloff")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Bastion);
+		Event Ability == Button(Primary Fire);
+		Event Damage < (Event Was Critical Hit ? 40 : 20);
+		Is In Alternate Form(Event Player) == False;
+	}
+
+	actions
+	{
+		Damage(Victim, Event Player, (Event Was Critical Hit ? 40 : 20) - Event Damage);
+	}
+}
+
+rule("[Echo On Damage] Brigitte - Bash - Lower stun duration")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Event Ability == Button(Primary Fire);
+		Is Firing Secondary(Event Player) == True;
+	}
+
+	actions
+	{
+		Wait Until(Has Status(Victim, Stunned), 0.064);
+		Clear Status(Victim, Stunned);
+	}
+}
+
+rule("[Echo On Damage] Brigitte - Bash - Cancel bashing status if damage")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Event Player.Brigitte_ShieldBashDmgMod == True;
+	}
+
+	actions
+	{
+		Event Player.Brigitte_Bashing = False;
+	}
+}
+
+rule("[Echo On Damage] Doomfist - Punch - Record enemies near punch victim")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Doomfist);
+		Event Ability == Button(Secondary Fire);
+	}
+
+	actions
+	{
+		"Set each of the players in radius of knockback pv to victim pos. Next frame, they will be knocked back relative to victim position."
+		Players Within Radius(Victim, 6, Team Of(Victim), Surfaces And All Barriers).Doomfist_NextFrameKB = Attacker;
+		"Set each of the players in radius of knockback pv to victim pos. Next frame, they will be knocked back relative to victim position."
+		Players Within Radius(Victim, 6, Team Of(Victim), Surfaces And All Barriers).Doomfist_NextFrameImpulse = Event Damage;
+		"Obviously we already punched the target."
+		Victim.Doomfist_NextFrameKB = Null;
+		"The impact should not cause knockbacks"
+		Wait(1, Ignore Condition);
+	}
+}
+
+rule("[Echo On Damage] Junkrat - Trap - Replace root with slow")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Junkrat);
+		Event Ability == Button(Ability 2);
+		(Event Player.OW2CurHero == Hero(Zenyatta) && Is Using Ultimate(Event Player)) == False;
+	}
+
+	actions
+	{
+		"The only way to break trap is to physically move the player out of it and then back again."
+		Victim.Junkrat_TrappedVec = Position Of(Victim);
+		Teleport(Victim, Victim + Vector(0, 5, 0));
+		Wait(0.016, Ignore Condition);
+		Teleport(Victim, Victim.Junkrat_TrappedVec);
+		Victim.SpeedMod = Victim.SpeedMod * 0.500;
+		Wait(3, Ignore Condition);
+		Victim.SpeedMod = Victim.SpeedMod * 2;
+		Victim.Junkrat_TrappedVec = Null;
+	}
+}
+
+rule("[Echo On Damage] Hanzo - Storm Arrow - 15% reduced damage to tanks")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Echo);
+		Event Ability == Button(Ability 2);
+		(Victim.OW2Role == Global.Tank) == True;
+	}
+
+	actions
+	{
+		Set Player Health(Victim, Health(Victim) + Event Damage * 0.150);
+		Event Player.OW2UltError += Event Damage * 0.150;
+	}
+}
+
+rule("[Echo On Damage] Mei - Primary - Damage increase (55 -> 90 per second)")
+{
+	event
+	{
+		Player Dealt Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Mei);
+		Event Ability == Button(Primary Fire);
+	}
+
+	actions
+	{
+		Damage(Victim, Event Player, Event Damage * (35 / 55));
+	}
+}
+
+rule("[Echo On Damage Taken] Sombra - Stealth - Exit stealth damage")
+{
+	event
+	{
+		Player Took Damage;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Sombra);
+		Is Using Ability 1(Event Player) == True;
+	}
+
+	actions
+	{
+		Wait(0.400, Abort When False);
+		Cancel Primary Action(Event Player);
+	}
+}
+
+rule("[Echo On Healing] Ana - Nade - Heal Nerf (100 -> 60)")
+{
+	event
+	{
+		Player Dealt Healing;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Ana);
+		Is Game In Progress == True;
+		Event Ability == Button(Ability 2);
+		Event Healing >= 60;
+	}
+
+	actions
+	{
+		"This is fine because we cannot heal someone to death so it doesn't matter if the initial heal is 100 (it can't change the outcome)."
+		If(Event Healing >= 100);
+			"Make sure tanks take commensurate reduction in healing vs. their healing role bonus"
+			Set Player Health(Healee, Health(Healee) - Event Healing * 0.400);
+			Event Player.OW2UltError += Event Healing * 0.400;
+		Else;
+			"Make sure we can heal people to full."
+			Set Player Health(Healee, Health(Healee) - (Event Healing - 60));
+			Event Player.OW2UltError += Event Healing - 60;
+		End;
+	}
+}
+
+rule("[Echo On Healing] Brigitte - Pack - Correct healing mod")
+{
+	event
+	{
+		Player Dealt Healing;
+		All;
+		Echo;
+	}
+
+	conditions
+	{
+		Event Player.OW2CurHero == Hero(Brigitte);
+		Normalized Health(Healee) != 1;
+		Event Ability == Button(Ability 2);
+	}
+
+	actions
+	{
+		Heal(Healee, Event Player, Event Healing * 0.204);
+	}
+}
+
+rule("Debug - Server loads and bans")
+{
+	event
+	{
+		Ongoing - Global;
+	}
+
+	conditions
+	{
+		Global.OW2PlayerJoined == True;
+	}
+
+	actions
+	{
+		If(Global.OW2BannedHeroes == Empty Array);
+			Create HUD Text(All Players(All Teams), Null, Custom String("No banned heroes"), Null, Left, 100, Color(White), Color(White),
+				Color(White), Visible To String and Color, Visible Always);
+		Else;
+			Global.OW2BansIter = 0;
+			While(Global.OW2BansIter < Count Of(Global.OW2BannedHeroes));
+				Create HUD Text(All Players(All Teams), Null, Global.OW2BannedHeroes[Global.OW2BansIter], Null, Left, 100, Color(White), Color(
+					Red), Color(White), Visible To, Visible Always);
+				Global.OW2BansIter += 1;
+			End;
+			Create HUD Text(All Players(All Teams), Null, Custom String("Banned heroes"), Null, Left, 100, Color(White), Color(White), Color(
+				White), Visible To String and Color, Visible Always);
+		End;
+		Create HUD Text(Host Player, Null, Custom String(
+			"{0}% Current Server Load\r\n{1}% Average Server Load\r\n{2}% Peak Server Load\r\n", Round To Integer(Server Load / 2.550, Up),
+			Round To Integer(Server Load Average / 2.550, Up), Round To Integer(Server Load Peak / 2.550, Up)), Null, Left, 100, Color(
+			White), Color(White), Color(White), Visible To and String, Visible Always);
+	}
+}
