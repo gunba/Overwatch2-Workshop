@@ -1,0 +1,1 @@
+An authentic recreation of the initial beta Overwatch 2 launch designed for the Overwatch 1 workshop. This workshop code was used by 18 out of 20 teams in an eSports league with $400m in investments from franchisees for a period of several months.
